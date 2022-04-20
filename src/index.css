@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Lexend:wght@100;200;500;600;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Permanent+Marker&family=Poppins:wght@100;200;400;500;700&display=swap");
+
+/* font-family: 'Chakra Petch', sans-serif; */
+
+:root {
+  --e-global-color-astglobalcolor0: #0170b9;
+  --e-global-color-astglobalcolor1: #3a3a3a;
+  --e-global-color-astglobalcolor2: #3a3a3a;
+  --e-global-color-astglobalcolor3: #4b4f58;
+  --e-global-color-astglobalcolor4: #f5f5f5;
+  --e-global-color-astglobalcolor5: #ffffff;
+  --e-global-color-astglobalcolor6: #f2f5f7;
+  --e-global-color-astglobalcolor7: #424242;
+  --e-global-color-astglobalcolor8: #000000;
+
+  --ast-global-color-0: #0170b9;
+  --ast-global-color-1: #3a3a3a;
+  --ast-global-color-2: #3a3a3a;
+  --ast-global-color-3: #4b4f58;
+  --ast-global-color-4: #f5f5f5;
+  --ast-global-color-5: #ffffff;
+  --ast-global-color-6: #f2f5f7;
+  --ast-global-color-7: #424242;
+  --ast-global-color-8: #000000;
+
+  --wp--preset--font-size--normal: 16px;
+  --wp--preset--font-size--huge: 42px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  fill: #000000;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.display-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  font-size: 93.75%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 921px) {
+  html {
+    font-size: 85.5%;
+  }
+}
