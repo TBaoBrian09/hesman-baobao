@@ -2,6 +2,10 @@ import React from "react";
 import Header from "./components/Header";
 import styled from "styled-components";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const HeroContainer = styled.section`
   position: relative;
   width: 100%;
@@ -15,6 +19,7 @@ const HeroContainer = styled.section`
 
     .hero__cloud--legand {
       width: 100%;
+      z-index: 99;
       img {
         max-width: 272px;
       }
@@ -48,7 +53,7 @@ const HeroContainer = styled.section`
       top: 167px;
 
       img {
-        width: 553px;
+        width: 533px;
       }
     }
 
@@ -56,7 +61,7 @@ const HeroContainer = styled.section`
       width: calc(100% - 200px);
       text-align: right;
       position: absolute;
-      top: 60px;
+      top: 58px;
 
       img {
         width: 700px;
@@ -71,6 +76,54 @@ const HeroContainer = styled.section`
 
       img {
         width: 300px;
+      }
+    }
+
+    .hero__cart--wrap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0px 10px;
+      position: absolute;
+      top: 390px;
+
+      .hero__cart {
+        width: 50%;
+
+        .hero__cart--item {
+          width: 235px !important;
+          min-height: 364px;
+          cursor: all-scroll;
+          position: relative;
+          border: 4px solid black;
+
+          .wrap--img {
+            position: absolute;
+
+            img {
+              width: 100%;
+              height: 100%;
+              background: no-repeat center center/cover;
+            }
+          }
+
+          .opacity {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5;
+          }
+
+          &:hover .opacity {
+            display: none;
+          }
+        }
+
+        .slick-track {
+          display: flex;
+          gap: 20px;
+        }
       }
     }
   }
@@ -133,6 +186,8 @@ function App() {
             />
           </div>
 
+          <HeroCartSlick />
+
           {/* cloud legand commic */}
           <div className="hero__cloud--legand-comic">
             <img
@@ -142,6 +197,55 @@ function App() {
           </div>
         </div>
       </HeroContainer>
+    </>
+  );
+}
+
+function HeroCartSlick() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  };
+  return (
+    <>
+      <div className="w-full hero__cart--wrap">
+        <div className="hero__cart">
+          <Slider {...settings}>
+            <div className="hero__cart--item">
+              <div className="wrap--img">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/hero-1.png.webp"
+                  alt=""
+                />
+              </div>
+              <div className="opacity"></div>
+            </div>
+
+            <div className="hero__cart--item">
+              <div className="wrap--img">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-2.png.webp"
+                  alt=""
+                />
+              </div>
+              <div className="opacity"></div>
+            </div>
+
+            <div className="hero__cart--item">
+              <div className="wrap--img">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp"
+                  alt=""
+                />
+              </div>
+              <div className="opacity"></div>
+            </div>
+          </Slider>
+        </div>
+      </div>
     </>
   );
 }

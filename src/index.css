@@ -55,6 +55,10 @@ a {
   justify-content: center;
 }
 
+.w-full {
+  width: 100%;
+}
+
 html {
   font-size: 93.75%;
   -webkit-text-size-adjust: 100%;
@@ -64,4 +68,15 @@ html {
   html {
     font-size: 85.5%;
   }
+}
+
+/* Phan Slick slider */
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  display: none;
+}
+
+.slick-list {
+  margin-left: -25px !important;
 }

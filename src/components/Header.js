@@ -7,6 +7,7 @@ const HeaderContainer = styled.section`
 
   .header--container {
     height: 100%;
+    padding: 10px 0px;
     border-bottom: 5px solid var(--ast-global-color-3);
 
     /* LOGO */
@@ -19,8 +20,10 @@ const HeaderContainer = styled.section`
         height: 100%;
 
         a {
+          display: block;
           height: 100%;
           width: 100%;
+
           .header__logo-item {
             width: 100%;
             height: 100%;
@@ -54,8 +57,11 @@ const HeaderContainer = styled.section`
     .header__cloud {
       width: 19.66%;
       height: 100%;
+      justify-content: flex-start;
 
       .header__cloud--wrap {
+        position: absolute;
+        top: 0;
         width: 216px;
         height: 100%;
 
