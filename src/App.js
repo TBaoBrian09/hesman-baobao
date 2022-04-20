@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Hero from "./components/Hero";
 
 const HeroContainer = styled.section`
   position: relative;
@@ -143,109 +144,7 @@ function App() {
   return (
     <>
       <Header></Header>
-
-      <HeroContainer>
-        <div className="hero--container">
-          {/* presents img */}
-          <div className="hero__present">
-            <img
-              src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.svg"
-              alt=""
-            />
-          </div>
-
-          {/* commic superhero img */}
-          <div className="hero__superhero">
-            <img
-              src="https://hesman.net/wp-content/uploads/2022/03/Hero-4.svg"
-              alt=""
-            />
-          </div>
-
-          {/* commic book img*/}
-          <div className="hero__commicbook">
-            <img
-              src="https://hesman.net/wp-content/uploads/2022/03/Hero-5.svg"
-              alt=""
-            />
-          </div>
-
-          {/* cloud show hero img */}
-          <div className="hero__show">
-            <img
-              src="https://hesman.net/wp-content/uploads/2022/03/Hero-1.svg"
-              alt=""
-            />
-          </div>
-
-          {/* clound legand */}
-          <div className="hero__cloud--legand">
-            <img
-              src="https://hesman.net/wp-content/uploads/2022/03/Vision.png.webp"
-              alt=""
-            />
-          </div>
-
-          <HeroCartSlick />
-
-          {/* cloud legand commic */}
-          <div className="hero__cloud--legand-comic">
-            <img
-              src="https://hesman.net/wp-content/uploads/2022/03/Hero-6-2.png.webp"
-              alt=""
-            />
-          </div>
-        </div>
-      </HeroContainer>
-    </>
-  );
-}
-
-function HeroCartSlick() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  };
-  return (
-    <>
-      <div className="w-full hero__cart--wrap">
-        <div className="hero__cart">
-          <Slider {...settings}>
-            <div className="hero__cart--item">
-              <div className="wrap--img">
-                <img
-                  src="https://hesman.net/wp-content/uploads/2022/03/hero-1.png.webp"
-                  alt=""
-                />
-              </div>
-              <div className="opacity"></div>
-            </div>
-
-            <div className="hero__cart--item">
-              <div className="wrap--img">
-                <img
-                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-2.png.webp"
-                  alt=""
-                />
-              </div>
-              <div className="opacity"></div>
-            </div>
-
-            <div className="hero__cart--item">
-              <div className="wrap--img">
-                <img
-                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp"
-                  alt=""
-                />
-              </div>
-              <div className="opacity"></div>
-            </div>
-          </Slider>
-        </div>
-      </div>
+      <Hero />
     </>
   );
 }
