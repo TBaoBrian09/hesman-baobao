@@ -237,6 +237,26 @@ function HeroCartSlick() {
               </div>
               <div className="opacity"></div>
             </div>
+
+            <div className="hero__cart--item">
+              <div className="wrap--img">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp"
+                  alt=""
+                />
+              </div>
+              <div className="opacity"></div>
+            </div>
+
+            <div className="hero__cart--item">
+              <div className="wrap--img">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp"
+                  alt=""
+                />
+              </div>
+              <div className="opacity"></div>
+            </div>
           </Slider>
         </div>
       </div>
