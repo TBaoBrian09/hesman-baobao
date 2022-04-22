@@ -30,9 +30,14 @@
   --wp--preset--font-size--normal: 16px;
   --wp--preset--font-size--huge: 42px;
 
+  --e-global-color-primary: #6ec1e4;
+  --e-global-color-secondary: #54595f;
+  --e-global-color-text: #333333;
+  --e-global-color-accent: #61ce70;
+  --e-global-color-a83d40f: #ffffff;
   --e-global-color-d1a5768: #3b62ff;
-
-  --e-global-color-text: #434343;
+  --e-global-color-f290abb: #dd69ff;
+  --e-global-color-fff794d: #ffb400;
 }
 
 * {
@@ -74,6 +79,7 @@ a {
   -webkit-border-radius: 3px;
   line-height: 1;
   text-align: center;
+  cursor: pointer;
 }
 
 html {

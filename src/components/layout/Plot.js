@@ -133,8 +133,10 @@ const PlotStyles = styled.section`
 
     .plot__character {
       position: absolute;
-      bottom: 0;
-      right: 0;
+      bottom: -10px;
+      right: 38px;
+      width: calc(100% - 10px);
+      text-align: end;
 
       img {
         width: 570px;

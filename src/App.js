@@ -1,16 +1,20 @@
 import React from "react";
-import Header from "./components/Header";
 import styled from "styled-components";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Header from "./components/layout/Header";
+import Hero from "./components/layout/Hero";
+import Video from "./components/layout/Video";
+import Plot from "./components/layout/Plot";
+import Slogan from "./components/layout/Slogan";
+import Member from "./components/layout/Member";
+import Ecosystem from "./components/layout/Ecosystem";
+import Future from "./components/layout/Future";
+import Plan from "./components/layout/Plan";
+import Journeys from "./components/layout/Journeys";
 
-import Hero from "./components/Hero";
-import Video from "./components/Video";
-import Plot from "./components/Plot";
-import Slogan from "./components/Slogan";
-import Member from "./components/Member";
 
 const ContainerApp = styled.section`
   width: 100%;
@@ -26,6 +30,10 @@ function App() {
       <Plot />
       <Slogan />
       <Member />
+      <Ecosystem />
+      <Future />
+      <Plan />
+      <Journeys />
     </ContainerApp>
   );
 }
