@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Lexend:wght@100;200;500;600;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Permanent+Marker&family=Poppins:wght@100;200;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Jura:wght@400;500;600;700&family=Lexend:wght@100;200;500;600;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Permanent+Marker&family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Jura:wght@300;400;600&family=Lexend:wght@100;200;500;600;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Permanent+Marker&family=Poppins:wght@300;600&display=swap");
 
 /* font-family: 'Chakra Petch', sans-serif; */
+/* font-family: 'Jura', sans-serif; */
 /* font-family: 'Jura', sans-serif; */
 
 :root {
@@ -27,6 +29,8 @@
 
   --wp--preset--font-size--normal: 16px;
   --wp--preset--font-size--huge: 42px;
+
+  --e-global-color-d1a5768: #3b62ff;
 
   --e-global-color-text: #434343;
 }
