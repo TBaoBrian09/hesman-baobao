@@ -26,7 +26,7 @@ const JourneysStyles = styled.section`
       .list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-        gap: 20px;
+        gap: 8px;
 
         .item {
           position: relative;
@@ -41,9 +41,20 @@ const JourneysStyles = styled.section`
             }
           }
 
-          .item-title {
+          .item-content {
             position: absolute;
-            bottom: 0;
+            bottom: 18px;
+            padding: 0 12px;
+
+            h2 {
+              color: #000000;
+              font-family: "Chakra Petch", Sans-serif;
+              font-size: 30px;
+              font-weight: 700;
+            }
+
+            p {
+            }
           }
 
           &:hover {
@@ -60,37 +71,44 @@ const dataItem = [
   {
     id: 1,
     url: "https://hesman.net/wp-content/uploads/2022/03/Lo-trinh-1.png.webp",
-    title: "Tháng 5 Chính thức ra mắt dự án & NFT lưu niệm",
+    month: "Tháng 5",
+    title: "Chính thức ra mắt dự án & NFT lưu niệm",
   },
   {
     id: 2,
     url: "https://hesman.net/wp-content/uploads/2022/03/Lo-trinh-2.png.webp",
-    title: "Tháng 6 IDO",
+    month: "Tháng 6",
+    title: "IDO",
   },
   {
     id: 3,
     url: "https://hesman.net/wp-content/uploads/2022/03/Lo-trinh-3.png.webp",
-    title: "Tháng 7 Beta test game Hesman Legend",
+    month: "Tháng 7",
+    title: "Beta test game Hesman Legend",
   },
   {
     id: 4,
     url: "https://hesman.net/wp-content/uploads/2022/03/Lo-trinh-4.png.webp",
-    title: "Tháng 8 Tổ chức sự kiện họp mặt người hâm mộ Hesman",
+    month: "Tháng 8",
+    title: "Tổ chức sự kiện họp mặt người hâm mộ Hesman",
   },
   {
     id: 5,
     url: "https://hesman.net/wp-content/uploads/2022/03/Lo-trinh-5.png.webp",
-    title: "Tháng 9 Mainnet launching cho game Hesman Legend (Story mode)",
+    month: "Tháng 9",
+    title: "Mainnet launching cho game Hesman Legend (Story mode)",
   },
   {
     id: 6,
     url: "https://hesman.net/wp-content/uploads/2022/03/Lo-trinh-6.png.webp",
-    title: "Tháng 10 Khởi chạy PvP Battle",
+    month: "Tháng 10",
+    title: "Khởi chạy PvP Battle",
   },
   {
     id: 7,
     url: "https://hesman.net/wp-content/uploads/2022/03/Lo-trinh-7.png.webp",
-    title: "Tháng 11 Ra mắt các sản phẩm kết hợp local brand Việt Nam",
+    month: "Tháng 11",
+    title: "Ra mắt các sản phẩm kết hợp local brand Việt Nam",
   },
 ];
 
@@ -114,13 +132,14 @@ const Journeys = () => {
           <div className="slider">
             <div className="list">
               {dataItem.map((item) => (
-                <div className="item">
+                <div className="item" key={item.id}>
                   <div className="item-img">
                     <img src={item.url} alt="" />
                   </div>
 
                   <div className="item-content">
-                    <p>{item.title}</p>
+                    <h2>{item.month}</h2>
+                    <p> {item.title}</p>
                   </div>
                 </div>
               ))}

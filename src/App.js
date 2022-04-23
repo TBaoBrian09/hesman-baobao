@@ -14,7 +14,8 @@ import Ecosystem from "./components/layout/Ecosystem";
 import Future from "./components/layout/Future";
 import Plan from "./components/layout/Plan";
 import Journeys from "./components/layout/Journeys";
-
+import Partner from "./components/layout/Partner";
+import Contact from "./components/layout/Contact";
 
 const ContainerApp = styled.section`
   width: 100%;
@@ -34,6 +35,8 @@ function App() {
       <Future />
       <Plan />
       <Journeys />
+      <Partner />
+      <Contact />
     </ContainerApp>
   );
 }
