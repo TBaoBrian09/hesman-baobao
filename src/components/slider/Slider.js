@@ -2,12 +2,11 @@ import React from "react";
 import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
 
-export const SlickSliderStyles = styled.section`
+export const SlickSliderStyles = styled.div`
   .cart--wrap {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0px 10px;
     position: absolute;
     /* top: 390px; */
 
@@ -15,11 +14,12 @@ export const SlickSliderStyles = styled.section`
       width: ${({ width }) => width};
 
       .cart--item {
-        /* width: 235px !important; */
+        width: 100%;
         min-height: 364px;
-        cursor: all-scroll;
+        cursor: ${({ cursor }) => cursor};
         position: relative;
-        border: 4px solid black;
+        border: ${({ borderpx }) => borderpx} solid
+          ${({ bordercolor }) => bordercolor};
 
         .wrap--img {
           position: absolute;
@@ -31,12 +31,21 @@ export const SlickSliderStyles = styled.section`
           }
         }
 
+        .title {
+          position: absolute;
+          bottom: 15px;
+
+          p {
+            text-align: center;
+          }
+        }
+
         .opacity {
           position: absolute;
           width: 100%;
           height: 100%;
-          background-color: black;
-          opacity: 0.5;
+          background-color: ${({ bgOpacity }) => bgOpacity};
+          opacity: ${({ opacity }) => opacity};
         }
 
         &:hover .opacity {
@@ -45,12 +54,22 @@ export const SlickSliderStyles = styled.section`
       }
 
       .slick-track {
-        display: flex;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       }
 
       .slick-cloned {
         display: none;
+      }
+
+      .slick-slide {
+        width: 100%;
+      }
+
+      .slick-track:before,
+      .slick-track:after {
+        display: none;
+        content: "";
       }
     }
   }
@@ -60,7 +79,17 @@ export const SlickSliderStyles = styled.section`
   }
 `;
 
-const SlickSlider = ({ dataItem, width, children, ...props }) => {
+const SlickSlider = ({
+  dataItem,
+  width,
+  opacity,
+  bgOpacity,
+  cursor,
+  borderpx,
+  bordercolor,
+  children,
+  ...props
+}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -81,6 +110,9 @@ const SlickSlider = ({ dataItem, width, children, ...props }) => {
                 <div className="cart--item" key={item.id}>
                   <div className="wrap--img">
                     <img src={item.url} alt="" />
+                    <div className="title">
+                      <p>{item.title}</p>
+                    </div>
                   </div>
                   <div className="opacity"></div>
                 </div>
