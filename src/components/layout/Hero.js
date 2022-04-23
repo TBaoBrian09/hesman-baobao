@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
 
@@ -134,7 +135,29 @@ const HeroContainer = styled.section`
   }
 `;
 
+const dataHero = [
+  {
+    id: 1,
+    url: "https://hesman.net/wp-content/uploads/2022/03/Hero-1.svg",
+  },
+  {
+    id: 2,
+    url: "https://hesman.net/wp-content/uploads/2022/03/HuyHung.png.webp",
+  },
+  {
+    id: 3,
+    url: "https://hesman.net/wp-content/uploads/2022/03/Gasco.png.webp",
+  },
+];
+
 const Hero = () => {
+  const [showHero, setShowHero] = useState(1);
+  const handleClickHero = () => {
+    setShowHero(dataHero);
+  };
+
+  console.log(showHero);
+
   return (
     <HeroContainer>
       <div className="hero--container">

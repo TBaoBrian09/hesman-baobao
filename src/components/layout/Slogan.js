@@ -173,7 +173,7 @@ const Slogan = () => {
 
             <div className="bg">
               <img
-                src="https://hesman.net/wp-content/uploads/2022/03/Frame.png.webp"
+                src="https://hesman.net/wp-content/uploads/2022/03/Frame2.png.webp"
                 alt=""
               />
             </div>
