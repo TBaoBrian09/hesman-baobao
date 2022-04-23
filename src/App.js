@@ -16,10 +16,11 @@ import Plan from "./components/layout/Plan";
 import Journeys from "./components/layout/Journeys";
 import Partner from "./components/layout/Partner";
 import Contact from "./components/layout/Contact";
+import Footer from "./components/layout/Footer";
 
 const ContainerApp = styled.section`
   width: 100%;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 `;
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Journeys />
       <Partner />
       <Contact />
+      <Footer />
     </ContainerApp>
   );
 }

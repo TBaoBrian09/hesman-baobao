@@ -93,7 +93,7 @@ const Header = () => {
           <div>
             <div className="header__nav--list">
               <li className="header__nav--list-item">
-                <a href="">TRANG CHỦ</a>
+                <a href="/#">TRANG CHỦ</a>
               </li>
               <li className="header__nav--list-item">
                 <a href="">GIỚI THIỆU</a>
