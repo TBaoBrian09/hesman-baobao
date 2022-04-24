@@ -8,6 +8,10 @@ const SloganStyles = styled.section`
     position: relative;
     width: 100%;
     height: 900px;
+
+    @media screen and (max-width: 1023px) {
+      display: block;
+    }
     .wrap {
       display: flex;
       flex-direction: column;
@@ -16,97 +20,103 @@ const SloganStyles = styled.section`
       height: 100%;
       width: 100%;
       position: relative;
-    }
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+      }
 
-    .right {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 10px;
-    }
+      .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 900px;
+        width: 100%;
+        z-index: -1;
 
-    .left {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
+  }
 
-    .title {
-      /* display: flex;
+  .right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
+  }
+
+  .left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+  .title {
+    /* display: flex;
       height: 100%;
       align-items: center;
       justify-content: center; */
 
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .mission1 {
+    .mission1 {
+      margin-bottom: 20px;
+      h2 {
+        color: var(--e-global-color-astglobalcolor8);
+        font-family: "Chakra Petch", Sans-serif;
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 56px;
         margin-bottom: 20px;
-        h2 {
-          color: var(--e-global-color-astglobalcolor8);
-          font-family: "Chakra Petch", Sans-serif;
-          font-size: 90px;
-          font-weight: 700;
-          line-height: 56px;
-          margin-bottom: 20px;
-        }
-      }
-
-      .mission2 {
-        margin-bottom: 20px;
-        h2 {
-          color: var(--e-global-color-d1a5768);
-          font-family: "Jura", Sans-serif;
-          font-size: 44px;
-          font-weight: 700;
-          line-height: 66px;
-          text-align: center;
-        }
-      }
-
-      .mission3 {
-        margin-bottom: 20px;
-        h2 {
-          color: var(--e-global-color-text);
-          font-family: "Jura", Sans-serif;
-          font-size: 44px;
-          font-weight: 700;
-          line-height: 66px;
-        }
-      }
-
-      .mission4 {
-        margin-bottom: 20px;
-        h2 {
-          color: var(--e-global-color-text);
-          font-family: "Jura", Sans-serif;
-          font-size: 26px;
-          font-weight: 700;
-          line-height: 39px;
-          text-align: center;
-        }
       }
     }
 
-    .bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 900px;
-      width: 100%;
-      z-index: -1;
+    .mission2 {
+      margin-bottom: 20px;
+      h2 {
+        color: var(--e-global-color-d1a5768);
+        font-family: "Jura", Sans-serif;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 66px;
+        text-align: center;
+      }
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
+    .mission3 {
+      margin-bottom: 20px;
+      h2 {
+        color: var(--e-global-color-text);
+        font-family: "Jura", Sans-serif;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 66px;
+      }
+    }
+
+    .mission4 {
+      margin-bottom: 20px;
+      h2 {
+        color: var(--e-global-color-text);
+        font-family: "Jura", Sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 39px;
+        text-align: center;
       }
     }
   }

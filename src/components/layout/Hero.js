@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
 
@@ -87,33 +87,47 @@ const HeroContainer = styled.section`
         width: 50%;
 
         .hero__cart--item {
-          width: 235px !important;
+          width: 235px;
           min-height: 364px;
           cursor: all-scroll;
           position: relative;
-          border: 4px solid black;
 
           .wrap--img {
             position: absolute;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
 
             img {
               width: 100%;
-              height: 100%;
               background: no-repeat center center/cover;
+              border: 4px solid black;
+              filter: brightness(60%) contrast(100%) saturate(100%) blur(0px)
+                hue-rotate(0deg);
+
+              &:hover {
+                filter: brightness(100%) contrast(100%) saturate(100%) blur(0px)
+                  hue-rotate(0deg);
+              }
             }
           }
 
-          .opacity {
+          /* .opacity {
             position: absolute;
             width: 100%;
             height: 100%;
             background-color: black;
             opacity: 0.5;
-          }
+          } */
 
           &:hover .opacity {
             display: none;
           }
+        }
+
+        .slick-initialized .slick-slide {
+          width: 30% !important;
         }
 
         .slick-track {
@@ -141,23 +155,60 @@ const dataHero = [
     url: "https://hesman.net/wp-content/uploads/2022/03/Hero-1.svg",
   },
   {
-    id: 2,
+    id: 1,
     url: "https://hesman.net/wp-content/uploads/2022/03/HuyHung.png.webp",
   },
   {
-    id: 3,
+    id: 2,
     url: "https://hesman.net/wp-content/uploads/2022/03/Gasco.png.webp",
   },
 ];
 
+const dataHeroItem = [
+  {
+    id: 1,
+    url: "https://hesman.net/wp-content/uploads/2022/03/hero-1.png.webp",
+  },
+  {
+    id: 2,
+    url: "https://hesman.net/wp-content/uploads/2022/03/Hero-2.png.webp",
+  },
+  {
+    id: 3,
+    url: "https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp",
+  },
+];
+
+console.log(dataHero[1].url);
+
 const Hero = () => {
-  const [showHero, setShowHero] = useState(1);
-  const handleClickHero = () => {
-    setShowHero(dataHero);
-  };
+  const [showHero, setShowHero] = useState(0);
+
+  // const handleChangeShowHero = (e) => {
+  //   setShowHero(e);
+  // };
 
   console.log(showHero);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <HeroContainer>
       <div className="hero--container">
@@ -187,6 +238,9 @@ const Hero = () => {
 
         {/* cloud show hero img */}
         <div className="hero__show">
+          {/* {dataHero.every((item) => {
+            if (item.id === showHero) return <img src={item.url} alt="" />;
+          })} */}
           <img
             src="https://hesman.net/wp-content/uploads/2022/03/Hero-1.svg"
             alt=""
@@ -201,7 +255,26 @@ const Hero = () => {
           />
         </div>
 
-        <HeroCartSlick />
+        {/* SLider */}
+        <div className="w-full hero__cart--wrap">
+          <div className="hero__cart">
+            <Slider {...settings}>
+              {dataHeroItem.length > 0 &&
+                dataHeroItem.map((item) => (
+                  <div
+                    key={item.id}
+                    className="hero__cart--item"
+                    onClick={() => setShowHero(item.id)}
+                  >
+                    <div className="wrap--img">
+                      <img src={item.url} alt="" />
+                    </div>
+                    {/* <div className="opacity"></div> */}
+                  </div>
+                ))}
+            </Slider>
+          </div>
+        </div>
 
         {/* cloud legand commic */}
         <div className="hero__cloud--legand-comic">
@@ -215,73 +288,53 @@ const Hero = () => {
   );
 };
 
-function HeroCartSlick() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  };
-  return (
-    <>
-      <div className="w-full hero__cart--wrap">
-        <div className="hero__cart">
-          <Slider {...settings}>
-            <div className="hero__cart--item">
-              <div className="wrap--img">
-                <img
-                  src="https://hesman.net/wp-content/uploads/2022/03/hero-1.png.webp"
-                  alt=""
-                />
-              </div>
-              <div className="opacity"></div>
-            </div>
+// function HeroCartSlick() {
+//   const settings = {
+//     dots: true,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 3,
+//     slidesToScroll: 3,
+//   };
+//   return (
+//     <>
+//       <div className="w-full hero__cart--wrap">
+//         <div className="hero__cart">
+//           <Slider {...settings}>
+//             <div className="hero__cart--item" onClick={() => setShowHero}>
+//               <div className="wrap--img">
+//                 <img
+//                   src="https://hesman.net/wp-content/uploads/2022/03/hero-1.png.webp"
+//                   alt=""
+//                 />
+//               </div>
+//               <div className="opacity"></div>
+//             </div>
 
-            <div className="hero__cart--item">
-              <div className="wrap--img">
-                <img
-                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-2.png.webp"
-                  alt=""
-                />
-              </div>
-              <div className="opacity"></div>
-            </div>
+//             <div className="hero__cart--item">
+//               <div className="wrap--img">
+//                 <img
+//                   src="https://hesman.net/wp-content/uploads/2022/03/Hero-2.png.webp"
+//                   alt=""
+//                 />
+//               </div>
+//               <div className="opacity"></div>
+//             </div>
 
-            <div className="hero__cart--item">
-              <div className="wrap--img">
-                <img
-                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp"
-                  alt=""
-                />
-              </div>
-              <div className="opacity"></div>
-            </div>
-
-            <div className="hero__cart--item">
-              <div className="wrap--img">
-                <img
-                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp"
-                  alt=""
-                />
-              </div>
-              <div className="opacity"></div>
-            </div>
-
-            <div className="hero__cart--item">
-              <div className="wrap--img">
-                <img
-                  src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp"
-                  alt=""
-                />
-              </div>
-              <div className="opacity"></div>
-            </div>
-          </Slider>
-        </div>
-      </div>
-    </>
-  );
-}
+//             <div className="hero__cart--item">
+//               <div className="wrap--img">
+//                 <img
+//                   src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp"
+//                   alt=""
+//                 />
+//               </div>
+//               <div className="opacity"></div>
+//             </div>
+//           </Slider>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
 
 export default Hero;

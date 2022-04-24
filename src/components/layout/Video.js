@@ -2,17 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
 const VideoContainer = styled.section`
-  height: 854px;
-  min-height: 854px;
+  max-height: 854px;
   margin-bottom: 2px;
 
   .video__container {
     width: 100%;
-    height: 100%;
+    height: 700px;
+
+    @media screen and (max-width: 1024px) {
+      height: 600px;
+    }
 
     .video__content {
       width: 100%;
       height: 100%;
+      background: center center/cover;
     }
   }
 `;

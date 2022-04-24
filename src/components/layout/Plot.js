@@ -8,6 +8,9 @@ const PlotStyles = styled.section`
       display: flex;
       width: 100%;
       position: relative;
+      @media screen and (max-width: 1023px) {
+        display: block;
+      }
 
       .plot__img-1 {
         position: relative;
@@ -17,14 +20,20 @@ const PlotStyles = styled.section`
           width: 100%;
           height: 100%;
         }
+
+        @media screen and (max-width: 1023px) {
+          display: none;
+        }
       }
 
       .content {
         flex: 4.5;
         position: relative;
         margin-top: 13px;
-        border-left: 8px solid black;
         height: 919px;
+        @media screen and (max-width: 1023px) {
+          margin-top: 0px;
+        }
 
         .content--bg {
           background: url("https://hesman.net/wp-content/uploads/2022/03/Hero-7-2.jpg.webp")
@@ -33,6 +42,10 @@ const PlotStyles = styled.section`
           height: 100%;
 
           border-right: 8px solid black;
+          @media screen and (max-width: 1023px) {
+            border: none;
+            border-top: 8px solid black;
+          }
         }
 
         .content--wrap {
@@ -79,6 +92,10 @@ const PlotStyles = styled.section`
           display: flex;
           gap: 20px;
 
+          @media screen and (max-width: 1023px) {
+            justify-content: center;
+          }
+
           .button--yellow {
             font-family: "Chakra Petch", Sans-serif;
             font-size: 24px;
@@ -116,8 +133,18 @@ const PlotStyles = styled.section`
       top: 532px;
       left: 149px;
 
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+        text-align: center;
+        left: 0;
+      }
+
       img {
         width: 177px;
+
+        @media screen and (max-width: 1023px) {
+          width: 266px;
+        }
       }
     }
 
@@ -138,8 +165,16 @@ const PlotStyles = styled.section`
       width: calc(100% - 10px);
       text-align: end;
 
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+      }
+
       img {
         width: 570px;
+
+        @media screen and (max-width: 1023px) {
+          width: 630px;
+        }
       }
     }
   }

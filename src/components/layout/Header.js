@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { TiThMenuOutline } from "react-icons/ti";
 
 const HeaderContainer = styled.section`
   height: 87px;
@@ -9,6 +10,12 @@ const HeaderContainer = styled.section`
     height: 100%;
     padding: 10px 0px;
     border-bottom: 5px solid var(--ast-global-color-3);
+
+    @media screen and (max-width: 1023px) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 13px;
+    }
 
     /* LOGO */
     .header__logo {
@@ -37,17 +44,44 @@ const HeaderContainer = styled.section`
       width: 65.961%;
       height: 100%;
 
+      div {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 1023px) {
+        height: auto;
+        position: absolute;
+        top: 80px;
+        border-top: 1px solid #ccc;
+        text-align: center;
+        width: 100%;
+        background: #fff;
+        z-index: 100;
+      }
+
       .header__nav--list {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        @media screen and (max-width: 1023px) {
+          display: block;
+        }
 
         .header__nav--list-item {
+          margin: 4px 0px;
           a {
             padding-left: 7px;
             padding-right: 7px;
             font-size: 18px;
             font-weight: 700;
+          }
+
+          &:hover {
+            background-color: #ccc;
+            cursor: pointer;
           }
         }
       }
@@ -58,6 +92,9 @@ const HeaderContainer = styled.section`
       width: 19.66%;
       height: 100%;
       justify-content: flex-start;
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
 
       .header__cloud--wrap {
         position: absolute;
@@ -70,10 +107,28 @@ const HeaderContainer = styled.section`
         }
       }
     }
+
+    /* Responsive menu */
+    .respon-menu {
+      display: none;
+
+      @media screen and (max-width: 1023px) {
+        display: block;
+      }
+
+      .icon {
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
   }
 `;
 
 const Header = () => {
+  const [showmenu, setShowmenu] = useState(true);
+  const handleClickMenu = () => {
+    setShowmenu(!showmenu);
+  };
   return (
     <HeaderContainer>
       <div className="header--container display-center  pad-10">
@@ -91,32 +146,34 @@ const Header = () => {
 
         <div className="header__nav display-center ">
           <div>
-            <div className="header__nav--list">
-              <li className="header__nav--list-item">
-                <a href="/#">TRANG CHỦ</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="">GIỚI THIỆU</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="">HỆ SINH THÁI</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="">TOKENOMICS</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="">LỘ TRÌNH</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="">DAPP</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="">ĐỐI TÁC</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="">LIÊN HỆ</a>
-              </li>
-            </div>
+            {showmenu && (
+              <div className="header__nav--list">
+                <li className="header__nav--list-item">
+                  <a href="/#">TRANG CHỦ</a>
+                </li>
+                <li className="header__nav--list-item">
+                  <a href="">GIỚI THIỆU</a>
+                </li>
+                <li className="header__nav--list-item">
+                  <a href="">HỆ SINH THÁI</a>
+                </li>
+                <li className="header__nav--list-item">
+                  <a href="">TOKENOMICS</a>
+                </li>
+                <li className="header__nav--list-item">
+                  <a href="">LỘ TRÌNH</a>
+                </li>
+                <li className="header__nav--list-item">
+                  <a href="">DAPP</a>
+                </li>
+                <li className="header__nav--list-item">
+                  <a href="">ĐỐI TÁC</a>
+                </li>
+                <li className="header__nav--list-item">
+                  <a href="">LIÊN HỆ</a>
+                </li>
+              </div>
+            )}
           </div>
         </div>
 
@@ -127,6 +184,12 @@ const Header = () => {
               src="https://hesman.net/wp-content/uploads/2022/03/Header-JoinNow.png.webp"
               alt=""
             />
+          </div>
+        </div>
+
+        <div className="respon-menu">
+          <div className="icon" onClick={handleClickMenu}>
+            <TiThMenuOutline />
           </div>
         </div>
       </div>
