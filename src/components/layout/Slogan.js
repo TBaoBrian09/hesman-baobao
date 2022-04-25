@@ -11,6 +11,7 @@ const SloganStyles = styled.section`
 
     @media screen and (max-width: 1023px) {
       display: block;
+      height: auto;
     }
     .wrap {
       display: flex;
@@ -40,7 +41,8 @@ const SloganStyles = styled.section`
     }
   }
 
-  .right {
+  .right,
+  .left {
     width: 50%;
     height: 100%;
     display: flex;
@@ -49,15 +51,10 @@ const SloganStyles = styled.section`
     margin: 0 10px;
     @media screen and (max-width: 1023px) {
       width: 100%;
+      height: 900px;
+      padding: 0px 19px;
+      margin: auto;
     }
-  }
-
-  .left {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
   }
 
   .title {

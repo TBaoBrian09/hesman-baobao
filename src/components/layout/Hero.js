@@ -151,7 +151,7 @@ const HeroContainer = styled.section`
 
 const dataHero = [
   {
-    id: 1,
+    id: 0,
     url: "https://hesman.net/wp-content/uploads/2022/03/Hero-1.svg",
   },
   {
@@ -166,36 +166,31 @@ const dataHero = [
 
 const dataHeroItem = [
   {
-    id: 1,
+    id: 0,
     url: "https://hesman.net/wp-content/uploads/2022/03/hero-1.png.webp",
   },
   {
-    id: 2,
+    id: 1,
     url: "https://hesman.net/wp-content/uploads/2022/03/Hero-2.png.webp",
   },
   {
-    id: 3,
+    id: 2,
     url: "https://hesman.net/wp-content/uploads/2022/03/Hero-3.png.webp",
   },
 ];
 
-console.log(dataHero[1].url);
-
 const Hero = () => {
-  const [showHero, setShowHero] = useState(0);
+  const [id, setId] = useState(0);
 
-  // const handleChangeShowHero = (e) => {
-  //   setShowHero(e);
-  // };
-
-  console.log(showHero);
+  console.log(id);
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -209,6 +204,7 @@ const Hero = () => {
       },
     ],
   };
+
   return (
     <HeroContainer>
       <div className="hero--container">
@@ -238,13 +234,7 @@ const Hero = () => {
 
         {/* cloud show hero img */}
         <div className="hero__show">
-          {/* {dataHero.every((item) => {
-            if (item.id === showHero) return <img src={item.url} alt="" />;
-          })} */}
-          <img
-            src="https://hesman.net/wp-content/uploads/2022/03/Hero-1.svg"
-            alt=""
-          />
+          <img src={dataHero[id].url} alt="" />
         </div>
 
         {/* clound legand */}
@@ -264,7 +254,7 @@ const Hero = () => {
                   <div
                     key={item.id}
                     className="hero__cart--item"
-                    onClick={() => setShowHero(item.id)}
+                    onClick={() => setId(item.id)}
                   >
                     <div className="wrap--img">
                       <img src={item.url} alt="" />

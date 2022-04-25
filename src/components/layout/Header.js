@@ -14,13 +14,16 @@ const HeaderContainer = styled.section`
     @media screen and (max-width: 1023px) {
       display: flex;
       justify-content: space-between;
-      padding: 0px 13px;
     }
 
     /* LOGO */
     .header__logo {
       width: 14.043%;
       height: 100%;
+
+      @media screen and (max-width: 1023px) {
+        padding-left: 10px;
+      }
 
       .header__logo--content {
         width: 100%;
@@ -114,6 +117,7 @@ const HeaderContainer = styled.section`
 
       @media screen and (max-width: 1023px) {
         display: block;
+        padding-right: 10px;
       }
 
       .icon {

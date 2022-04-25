@@ -8,6 +8,10 @@ const MemberStyles = styled.section`
   .member {
     display: flex;
 
+    @media screen and (max-width: 1023px) {
+      display: block;
+    }
+
     .review {
       width: 32%;
       display: flex;
@@ -15,6 +19,11 @@ const MemberStyles = styled.section`
       justify-content: center;
       flex-direction: column;
       padding: 10px;
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+        align-items: flex-start;
+        margin-bottom: 40px;
+      }
 
       h2 {
         color: var(--e-global-color-text);
@@ -24,14 +33,20 @@ const MemberStyles = styled.section`
         line-height: 76px;
         letter-spacing: -0.05px;
         margin-bottom: 20px;
+        @media screen and (max-width: 1023px) {
+          text-transform: inherit;
+        }
       }
 
-      p {
-        font-family: "Jura", Sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: 1px;
+      .title {
+        text-align: justify;
+        p {
+          font-family: "Jura", Sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          letter-spacing: 1px;
+        }
       }
     }
 
@@ -40,6 +55,10 @@ const MemberStyles = styled.section`
       display: flex;
       max-height: 650px;
       overflow: hidden;
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+        gap: 105px;
+      }
 
       .slider-item {
         position: relative;
@@ -48,6 +67,10 @@ const MemberStyles = styled.section`
 
       img {
         width: 517px;
+
+        @media screen and (max-width: 1023px) {
+          width: 443px;
+        }
       }
 
       .cloud__name {
@@ -69,16 +92,21 @@ const Member = () => {
       <div className="member">
         <div className="review">
           <h2>Đội ngũ</h2>
-          <p>
-            Họa sĩ Nguyễn Hùng Lân sinh năm 1956, là một trong số rất ít họa sĩ
-            vẽ truyện tranh Việt đạt được nhiều thành tựu to lớn trong sự nghiệp
-            Ngoài Dũng sĩ Hesman làm mưa làm gió thị trường truyện tranh Việt,
-            độc giả còn quen thuộc với truyện tranh “Siêu nhân Việt Nam”, Cô
-            Tiên Xanh và những đầu sách mà ông tham gia vẽ tranh minh họa như Võ
-            sĩ đạo Samurai, Nghìn lẻ một đêm, Gương sáng tuổi xanh, v.v. Số đầu
-            truyện tranh của ông đã xuất bản tính từ năm 1987 đến nay đã gần 700
-            tập đủ mọi thể loại.
-          </p>
+          <div className="title">
+            <p>
+              Họa sĩ Nguyễn Hùng Lân sinh năm 1956, là một trong số rất ít họa
+              sĩ vẽ truyện tranh Việt đạt được nhiều thành tựu to lớn trong sự
+              nghiệp
+            </p>
+            <p>
+              Ngoài Dũng sĩ Hesman làm mưa làm gió thị trường truyện tranh Việt,
+              độc giả còn quen thuộc với truyện tranh “Siêu nhân Việt Nam”, Cô
+              Tiên Xanh và những đầu sách mà ông tham gia vẽ tranh minh họa như
+              Võ sĩ đạo Samurai, Nghìn lẻ một đêm, Gương sáng tuổi xanh, v.v. Số
+              đầu truyện tranh của ông đã xuất bản tính từ năm 1987 đến nay đã
+              gần 700 tập đủ mọi thể loại.
+            </p>
+          </div>
         </div>
 
         <div className="slider">
