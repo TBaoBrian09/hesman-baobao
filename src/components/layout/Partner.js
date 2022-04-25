@@ -3,6 +3,8 @@ import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
 
 const PartnerStyles = styled.section`
+  width:100%;
+  overflow: hidden;
   .container {
     width: 100%;
     display: flex;
@@ -37,7 +39,9 @@ const PartnerStyles = styled.section`
         }
       }
     }
-
+    .slick-list {
+      overflow: hidden;
+    }
     .wrap-content {
       width: 100%;
       display: flex;
@@ -54,8 +58,7 @@ const PartnerStyles = styled.section`
         justify-content: center;
         max-width: 1140px;
         width: 100%;
-        padding: 50px 10px;
-
+        padding-bottom:3rem;
         .title {
           color: var(--e-global-color-text);
           font-family: "Chakra Petch", Sans-serif;
@@ -92,6 +95,16 @@ const PartnerStyles = styled.section`
     }
   }
 `;
+const ContainerImg = styled.img`
+  width:100%;
+`
+const Test = styled.div`
+  @media only screen and (min-width: 600px) and (max-width: 1024px) {
+    width:300px;
+  }
+  display:flex;
+  justify-content:center;
+`
 
 const dataPartner = [
   {
@@ -123,20 +136,32 @@ const dataPartner = [
 const Partner = () => {
   const settings = {
     dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    arrows: true,
+		infinite: true,
+		slidesToScroll: 3,
+		slidesToShow: 3,
+		accessibility: true,
+		variableWidth: false,
+		focusOnSelect: false,
+		// centerMode: true,
     responsive: [
       {
-        breakpoint: 1023,
+        breakpoint: 1080,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           dots: true,
         },
       },
+      {
+				breakpoint: 768,
+				settings: {
+					slidesToScroll: 2,
+					slidesToShow: 2,
+          // centerMode: true,
+				}
+			}
     ],
   };
   return (
@@ -162,9 +187,9 @@ const Partner = () => {
             <div className="list">
               <Slider {...settings}>
                 {dataPartner.map((item) => (
-                  <div className="item" key={item.id}>
-                    <img src={item.url} alt="" />
-                  </div>
+                  <Test>
+                    <ContainerImg src={item.url} alt="" />
+                  </Test>
                 ))}
               </Slider>
             </div>
