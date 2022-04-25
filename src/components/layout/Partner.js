@@ -75,8 +75,6 @@ const PartnerStyles = styled.section`
 
           .item {
             width: 170px;
-            padding: 10px;
-
             img {
               width: 100%;
               height: 100%;
@@ -85,7 +83,7 @@ const PartnerStyles = styled.section`
 
           .slick-track {
             display: flex;
-            gap: 140px;
+            gap: 160px;
           }
         }
       }
@@ -126,17 +124,30 @@ const Partner = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
+    // centerMode: true,
     responsive: [
       {
-        breakpoint: 1023,
+        breakpoint: 1080,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
+          
         },
       },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+          centerMode: true,
+          centerPadding: '40px',
+        }
+      }
     ],
   };
   return (
