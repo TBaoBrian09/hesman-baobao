@@ -20,6 +20,7 @@ import Footer from "./components/layout/Footer";
 
 const ContainerApp = styled.section`
   width: 100%;
+  overflow: hidden;
   /* margin-bottom: 50px; */
 `;
 

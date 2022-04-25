@@ -83,7 +83,7 @@ const PartnerStyles = styled.section`
 
           .slick-track {
             display: flex;
-            gap: 140px;
+            gap: 160px;
           }
         }
       }
@@ -133,6 +133,17 @@ const Partner = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+          centerMode: true,
+          // centerPadding: "40px",
         },
       },
     ],
