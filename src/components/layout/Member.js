@@ -82,7 +82,9 @@ const MemberStyles = styled.section`
           width: 527px;
           border: none !important;
         }
-
+        &:focus-visible{
+          outline:none !important;
+        }
         .item-name {
           position: absolute;
           bottom: 0;
@@ -90,7 +92,7 @@ const MemberStyles = styled.section`
 
           .item-img:focus-visible {
            
-            border: none;
+            border: none !important;
           }
 
           img {
