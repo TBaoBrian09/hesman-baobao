@@ -26,6 +26,9 @@ const HeroContainer = styled.section`
       text-align: right;
       position: absolute;
       top: 237px;
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
 
       img {
         width: 240px;
@@ -39,6 +42,9 @@ const HeroContainer = styled.section`
 
       img {
         width: 700px;
+        @media screen and (max-width: 1023px) {
+          width: 600px;
+        }
       }
     }
 
@@ -58,6 +64,10 @@ const HeroContainer = styled.section`
       text-align: right;
       position: absolute;
       top: 58px;
+
+      @media screen and (max-width: 1023px) {
+        top: 300px;
+      }
 
       img {
         width: 700px;
@@ -83,6 +93,10 @@ const HeroContainer = styled.section`
       position: absolute;
       top: 390px;
 
+      @media screen and (max-width: 1023px) {
+        top: 220px;
+      }
+
       .hero__cart {
         width: 50%;
 
@@ -93,7 +107,7 @@ const HeroContainer = styled.section`
           position: relative;
 
           .wrap--img {
-            position: absolute;
+            /* position: absolute; */
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -133,6 +147,15 @@ const HeroContainer = styled.section`
         .slick-track {
           display: flex;
           gap: 20px;
+        }
+
+        .slick-dots {
+          bottom: 12px;
+        }
+
+        .slick-dots li button:before {
+          font-size: 15px;
+          color: white;
         }
       }
     }
@@ -190,7 +213,7 @@ const Hero = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -199,6 +222,16 @@ const Hero = () => {
           infinite: true,
           speed: 500,
           slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },

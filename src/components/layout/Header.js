@@ -6,9 +6,13 @@ const HeaderContainer = styled.section`
   height: 87px;
   z-index: 99;
 
+  @media screen and (max-width: 1023px) {
+    height: auto;
+  }
+
   .header--container {
     height: 100%;
-    padding: 10px 0px;
+    padding: 10px 10px;
     border-bottom: 5px solid var(--ast-global-color-3);
 
     @media screen and (max-width: 1023px) {
@@ -54,7 +58,8 @@ const HeaderContainer = styled.section`
       @media screen and (max-width: 1023px) {
         height: auto;
         position: absolute;
-        top: 80px;
+        top: 65px;
+        left: 0;
         border-top: 1px solid #ccc;
         text-align: center;
         width: 100%;
@@ -82,9 +87,15 @@ const HeaderContainer = styled.section`
             font-weight: 700;
           }
 
-          &:hover {
-            background-color: #ccc;
-            cursor: pointer;
+          @media screen and (max-width: 1023px) {
+            .active {
+              background-color: #55595c;
+            }
+
+            &:hover {
+              background-color: #55595c;
+              cursor: pointer;
+            }
           }
         }
       }
@@ -152,7 +163,7 @@ const Header = () => {
           <div>
             {showmenu && (
               <div className="header__nav--list">
-                <li className="header__nav--list-item">
+                <li className="header__nav--list-item active">
                   <a href="/#">TRANG CHỦ</a>
                 </li>
                 <li className="header__nav--list-item">

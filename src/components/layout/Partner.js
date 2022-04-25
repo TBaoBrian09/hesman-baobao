@@ -20,6 +20,12 @@ const PartnerStyles = styled.section`
       gap: 40px;
       width: 100%;
 
+      @media screen and (max-width: 1023px) {
+        display: block;
+        text-align: center;
+        padding: 20px;
+      }
+
       .title {
         h2 {
           color: var(--e-global-color-a83d40f);
@@ -47,7 +53,7 @@ const PartnerStyles = styled.section`
         justify-content: center;
         max-width: 1140px;
         width: 100%;
-        padding: 50px 0px;
+        padding: 50px 10px;
 
         .title {
           color: var(--e-global-color-text);
@@ -57,16 +63,18 @@ const PartnerStyles = styled.section`
 
           h1 {
             font-size: 100px;
+            text-transform: inherit;
           }
         }
 
         .list {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(167px, 1fr));
           width: 100%;
 
           .item {
             width: 170px;
+            padding: 10px;
 
             img {
               width: 100%;

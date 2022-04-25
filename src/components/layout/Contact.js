@@ -7,7 +7,7 @@ const ContactStyles = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px 50px 0px;
+  padding: 20px 10px 50px 10px;
   .container {
     width: 100%;
     max-width: 1140px;
@@ -15,6 +15,10 @@ const ContactStyles = styled.section`
 
     .formContainer {
       width: 50%;
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+        padding: 0px 18px;
+      }
 
       .title {
         h1 {
@@ -23,6 +27,10 @@ const ContactStyles = styled.section`
           font-size: 100px;
           font-weight: bold;
           letter-spacing: -0.05px;
+          @media screen and (max-width: 1023px) {
+            text-transform: inherit;
+            text-align: center;
+          }
         }
       }
 
@@ -37,6 +45,7 @@ const ContactStyles = styled.section`
           flex-grow: 1;
           font-size: 18px;
           padding: 15px 10px;
+          font-weight: 700;
         }
       }
 
@@ -52,6 +61,7 @@ const ContactStyles = styled.section`
           font-size: 18px;
           padding: 15px 10px;
           max-height: 120px;
+          font-weight: 700;
         }
       }
 
@@ -86,6 +96,9 @@ const ContactStyles = styled.section`
       display: flex;
       align-items: center;
       justify-content: center;
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
 
       img {
         width: 100%;

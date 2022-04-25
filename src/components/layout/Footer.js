@@ -11,7 +11,8 @@ const FooterStyles = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid #4b4f58;
+  border-top: 5px solid #4b4f58;
+  border-bottom: 5px solid #4b4f58;
   .container {
     width: 100%;
     max-width: 1140px;
@@ -24,6 +25,11 @@ const FooterStyles = styled.footer`
       display: grid;
       grid-template-columns: repeat(4, 25%);
 
+      @media screen and (max-width: 1023px) {
+        grid-template-columns: repeat(1, 100%);
+        padding: 20px 0;
+      }
+
       .layout-logo {
         display: flex;
         align-items: center;
@@ -35,7 +41,15 @@ const FooterStyles = styled.footer`
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        @media screen and (max-width: 1023px) {
+        }
+
+        .list {
+          @media screen and (max-width: 1023px) {
+            width: 100%;
+          }
+        }
 
         .item {
           padding: 13px 20px;
@@ -57,6 +71,11 @@ const FooterStyles = styled.footer`
         .list {
           display: flex;
           gap: 20px;
+
+          @media screen and (max-width: 1023px) {
+            width: 100%;
+            justify-content: space-around;
+          }
 
           .item {
             font-size: 30px;
