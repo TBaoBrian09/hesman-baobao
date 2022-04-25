@@ -8,6 +8,9 @@ const ContactStyles = styled.section`
   align-items: center;
   justify-content: center;
   padding: 20px 10px 50px 10px;
+  @media screen and (max-width: 1023px) {
+    padding: 0;
+  }
   .container {
     width: 100%;
     max-width: 1140px;
@@ -46,6 +49,10 @@ const ContactStyles = styled.section`
           font-size: 18px;
           padding: 15px 10px;
           font-weight: 700;
+
+          @media screen and (max-width: 1023px) {
+            padding: 0;
+          }
         }
       }
 
@@ -62,6 +69,10 @@ const ContactStyles = styled.section`
           padding: 15px 10px;
           max-height: 120px;
           font-weight: 700;
+
+          @media screen and (max-width: 1023px) {
+            padding: 0;
+          }
         }
       }
 

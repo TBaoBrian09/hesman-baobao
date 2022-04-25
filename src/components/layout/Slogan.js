@@ -52,7 +52,6 @@ const SloganStyles = styled.section`
     @media screen and (max-width: 1023px) {
       width: 100%;
       height: 900px;
-      padding: 0px 19px;
       margin: auto;
     }
   }

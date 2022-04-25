@@ -22,7 +22,7 @@ const JourneysStyles = styled.section`
 
     .content {
       width: 100%;
-      padding: 50px 10px 50px 10px;
+      padding: 50px 0px 50px 0px;
 
       .list {
         display: grid;

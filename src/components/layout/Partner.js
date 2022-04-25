@@ -20,11 +20,9 @@ const PartnerStyles = styled.section`
       justify-content: center;
       gap: 40px;
       width: 100%;
-
       @media screen and (max-width: 1023px) {
         display: block;
         text-align: center;
-        padding: 20px;
       }
 
       .title {
