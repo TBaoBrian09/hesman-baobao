@@ -66,7 +66,7 @@ const JourneysStyles = styled.section`
 
         .slick-track {
           display: flex;
-          gap: 0px 10px;
+          gap: 0px 35px;
         }
       }
     }
@@ -124,7 +124,7 @@ const Journeys = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 7,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     // slidesToScroll: 3,
     responsive: [

@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
 
 const PartnerStyles = styled.section`
@@ -81,6 +82,11 @@ const PartnerStyles = styled.section`
               height: 100%;
             }
           }
+
+          .slick-track {
+            display: flex;
+            gap: 140px;
+          }
         }
       }
     }
@@ -115,6 +121,24 @@ const dataPartner = [
 ];
 
 const Partner = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
   return (
     <PartnerStyles>
       <div className="container">
@@ -136,11 +160,13 @@ const Partner = () => {
               <h1>Đối tác</h1>
             </div>
             <div className="list">
-              {dataPartner.map((item) => (
-                <div className="item" key={item.id}>
-                  <img src={item.url} alt="" />
-                </div>
-              ))}
+              <Slider {...settings}>
+                {dataPartner.map((item) => (
+                  <div className="item" key={item.id}>
+                    <img src={item.url} alt="" />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
         </div>
