@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
 import SlickSlider from "../slider/Slider";
 
@@ -62,6 +63,11 @@ const JourneysStyles = styled.section`
               hue-rotate(0deg);
           }
         }
+
+        .slick-track {
+          display: flex;
+          gap: 0px 10px;
+        }
       }
     }
   }
@@ -113,6 +119,26 @@ const dataItem = [
 ];
 
 const Journeys = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 7,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    // slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
   return (
     <JourneysStyles>
       <div className="container">
@@ -131,18 +157,20 @@ const Journeys = () => {
         <div className="content">
           <div className="slider">
             <div className="list">
-              {dataItem.map((item) => (
-                <div className="item" key={item.id}>
-                  <div className="item-img">
-                    <img src={item.url} alt="" />
-                  </div>
+              <Slider {...settings}>
+                {dataItem.map((item) => (
+                  <div className="item" key={item.id}>
+                    <div className="item-img">
+                      <img src={item.url} alt="" />
+                    </div>
 
-                  <div className="item-content">
-                    <h2>{item.month}</h2>
-                    <p> {item.title}</p>
+                    <div className="item-content">
+                      <h2>{item.month}</h2>
+                      <p> {item.title}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </Slider>
             </div>
           </div>
         </div>

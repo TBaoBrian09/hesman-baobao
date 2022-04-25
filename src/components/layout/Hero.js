@@ -54,6 +54,11 @@ const HeroContainer = styled.section`
       position: absolute;
       top: 167px;
 
+      @media screen and (max-width: 1023px) {
+        top: 409px;
+        left: 97px;
+      }
+
       img {
         width: 533px;
       }
@@ -79,6 +84,9 @@ const HeroContainer = styled.section`
       top: 60px;
       width: calc(100% - 734px);
       text-align: right;
+      @media screen and (max-width: 1023px) {
+        top: 273px;
+      }
 
       img {
         width: 300px;

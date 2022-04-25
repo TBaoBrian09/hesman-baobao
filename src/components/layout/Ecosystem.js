@@ -21,8 +21,8 @@ const EcosystemStyles = styled.section`
     width: 100%;
 
     img {
+      width: 100%;
       margin-bottom: 5px;
-      width: 70px;
     }
   }
 `;

@@ -6,13 +6,18 @@ const MemberStyles = styled.section`
   padding: 50px 10px 50px 10px;
 
   .member {
+    width: 100%;
     display: flex;
+    /* height: 900px; */
+    position: relative;
+    justify-content: space-around;
 
     @media screen and (max-width: 1023px) {
       display: block;
     }
 
     .review {
+      /* position: absolute; */
       width: 32%;
       display: flex;
       align-items: center;
@@ -51,42 +56,74 @@ const MemberStyles = styled.section`
     }
 
     .slider {
-      width: 68%;
-      display: flex;
-      max-height: 650px;
-      overflow: hidden;
+      /* position: absolute; */
+      width: 55%;
+
       @media screen and (max-width: 1023px) {
         width: 100%;
-        gap: 105px;
       }
 
-      .slider-item {
+      .item {
         position: relative;
-        margin: 0 -90px;
-      }
+        cursor: move;
 
-      img {
-        width: 517px;
-
-        @media screen and (max-width: 1023px) {
-          width: 443px;
+        &:hover .item-name img {
+          display: block;
         }
-      }
 
-      .cloud__name {
-        position: absolute;
-        bottom: -37px;
-        right: 138px;
+        filter: brightness(60%) contrast(100%) saturate(100%) blur(0px)
+          hue-rotate(0deg);
 
+        &:hover {
+          filter: brightness(100%) contrast(100%) saturate(100%) blur(0px)
+            hue-rotate(0deg);
+        }
         img {
-          width: 250px;
+          width: 527px;
+          border: none !important;
+        }
+
+        .item-name {
+          position: absolute;
+          bottom: 0;
+          left: 144px;
+
+          .item-img:focus-visible {
+           
+            border: none;
+          }
+
+          img {
+            width: 250px;
+            display: none;
+          }
         }
       }
+    }
+
+    .slick-track {
+      display: flex;
+      gap: 73px;
+
+      @media screen and (max-width: 1023px) {
+        gap: 114px;
+      }
+    }
+
+    .slick-slide:active {
+      border: none;
     }
   }
 `;
 
 const Member = () => {
+  const settings = {
+    // dots: true,
+    // infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <MemberStyles>
       <div className="member">
@@ -110,61 +147,64 @@ const Member = () => {
         </div>
 
         <div className="slider">
-          <div className="slider-item">
-            <img
-              srcSet="https://hesman.net/wp-content/uploads/2022/03/Group-65.png.webp"
-              alt=""
-            />
-            <div className="cloud__name">
+          <Slider {...settings}>
+            <div className="item">
               <img
-                src="https://hesman.net/wp-content/uploads/2022/03/Team-Title-3.png.webp"
+                className="item-img"
+                src="https://hesman.net/wp-content/uploads/2022/03/Group-65.png.webp"
                 alt=""
               />
-            </div>
-          </div>
 
-          <div className="slider-item">
-            <img
-              srcSet="https://hesman.net/wp-content/uploads/2022/03/Group-66.png.webp"
-              alt=""
-            />
-            <div className="cloud__name">
+              <div className="item-name">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/Team-Title-3.png.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div className="item">
               <img
-                src="https://hesman.net/wp-content/uploads/2022/03/Team-Title-3.png.webp"
+                src="https://hesman.net/wp-content/uploads/2022/03/Group-65.png.webp"
                 alt=""
               />
-            </div>
-          </div>
 
-          <div className="slider-item">
-            <img
-              srcSet="https://hesman.net/wp-content/uploads/2022/03/Group-67.png.webp"
-              alt=""
-            />
-            <div className="cloud__name">
+              <div className="item-name">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/Team-Title-3.png.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div className="item">
               <img
-                src="https://hesman.net/wp-content/uploads/2022/03/Team-Title-3.png.webp"
+                src="https://hesman.net/wp-content/uploads/2022/03/Group-65.png.webp"
                 alt=""
               />
-            </div>
-          </div>
 
-          <div className="slider-item">
-            <img
-              srcSet="https://hesman.net/wp-content/uploads/2022/03/Group-68.png.webp"
-              alt=""
-            />
-            <div className="cloud__name">
+              <div className="item-name">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/Team-Title-3.png.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div className="item">
               <img
-                src="https://hesman.net/wp-content/uploads/2022/03/Team-Title-3.png.webp"
+                src="https://hesman.net/wp-content/uploads/2022/03/Group-65.png.webp"
                 alt=""
               />
-            </div>
-          </div>
 
-          <div className="slider-item">
-            <img srcSet="../images/Group12.png" alt="" />
-          </div>
+              <div className="item-name">
+                <img
+                  src="https://hesman.net/wp-content/uploads/2022/03/Team-Title-3.png.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </Slider>
         </div>
       </div>
     </MemberStyles>
