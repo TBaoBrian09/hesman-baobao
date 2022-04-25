@@ -12,6 +12,9 @@ const VideoContainer = styled.section`
     @media screen and (max-width: 1024px) {
       height: 600px;
     }
+    @media screen and (max-width: 500px) {
+      height: 300px;
+    }
 
     .video__content {
       width: 100%;

@@ -9,6 +9,10 @@ const HeroContainer = styled.section`
   min-height: 795px;
   overflow: hidden;
 
+  @media screen and (max-width: 500px) {
+    min-height: 1000px;
+  }
+
   .hero--container {
     position: absolute;
     width: 100%;
@@ -18,6 +22,10 @@ const HeroContainer = styled.section`
       z-index: 99;
       img {
         max-width: 272px;
+
+        @media screen and (max-width: 500px) {
+          max-width: 150px;
+        }
       }
     }
 
@@ -40,10 +48,19 @@ const HeroContainer = styled.section`
       top: -105px;
       left: 52px;
 
+      @media screen and (max-width: 500px) {
+        top: -225px;
+        left: 0px;
+      }
+
       img {
         width: 700px;
         @media screen and (max-width: 1023px) {
           width: 600px;
+        }
+        @media screen and (max-width: 500px) {
+          width: 400px;
+          height: 850px;
         }
       }
     }
@@ -58,9 +75,19 @@ const HeroContainer = styled.section`
         top: 409px;
         left: 97px;
       }
+      @media screen and (max-width: 500px) {
+        top: 200px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+      }
 
       img {
         width: 533px;
+
+        @media screen and (max-width: 500px) {
+          width: 350px;
+        }
       }
     }
 
@@ -73,9 +100,16 @@ const HeroContainer = styled.section`
       @media screen and (max-width: 1023px) {
         top: 300px;
       }
+      @media screen and (max-width: 500px) {
+        top: 150px;
+        width: 100%;
+      }
 
       img {
         width: 700px;
+        @media screen and (max-width: 500px) {
+          width: 400px;
+        }
       }
     }
 
@@ -102,7 +136,7 @@ const HeroContainer = styled.section`
       top: 390px;
 
       @media screen and (max-width: 1023px) {
-        top: 220px;
+        /* top: 220px; */
       }
 
       .hero__cart {

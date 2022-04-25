@@ -62,7 +62,7 @@ const HeaderContainer = styled.section`
         background: #fff;
         z-index: 100;
       }
-      @media screen and (max-width: 420px) {
+      @media screen and (max-width: 500px) {
         top: 62px;
         border-top: none;
       }
