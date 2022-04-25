@@ -107,6 +107,11 @@ const HeroContainer = styled.section`
 
       .hero__cart {
         width: 50%;
+        height: 590px;
+
+        @media screen and (max-width: 500px) {
+          width: 100%;
+        }
 
         .hero__cart--item {
           width: 235px;
@@ -148,8 +153,20 @@ const HeroContainer = styled.section`
           }
         }
 
+        .slick-slider {
+          @media screen and (max-width: 500px) {
+            height: 100%;
+          }
+        }
+
         .slick-initialized .slick-slide {
           width: 30% !important;
+
+          .slick-list {
+            @media screen and (max-width: 500px) {
+              height: 100%;
+            }
+          }
         }
 
         .slick-track {

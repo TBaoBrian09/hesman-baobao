@@ -43,6 +43,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 h1,
@@ -109,4 +110,8 @@ html {
 
 .slick-list {
   /* margin-left: -25px !important; */
+}
+
+.slick-arrow {
+  display: none !important;
 }

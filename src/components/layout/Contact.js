@@ -20,7 +20,7 @@ const ContactStyles = styled.section`
       width: 50%;
       @media screen and (max-width: 1023px) {
         width: 100%;
-        padding: 0px 18px;
+        padding: 65px 18px;
       }
 
       .title {
@@ -49,10 +49,6 @@ const ContactStyles = styled.section`
           font-size: 18px;
           padding: 15px 10px;
           font-weight: 700;
-
-          @media screen and (max-width: 1023px) {
-            padding: 0;
-          }
         }
       }
 
@@ -127,21 +123,25 @@ const Contact = () => {
             <div className="title">
               <h1>Liên hệ</h1>
             </div>
-            <div className="input">
-              <input type="text" name="fullname" placeholder="Họ và Tên" />
+
+            <div className="container-input">
+              <div className="input">
+                <input type="text" name="fullname" placeholder="Họ và Tên" />
+              </div>
+              <div className="input">
+                <input type="email" name="email" placeholder="Địa chỉ email" />
+              </div>
+              <div className="textare">
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Lời nhắn"
+                ></textarea>
+              </div>
             </div>
-            <div className="input">
-              <input type="email" name="email" placeholder="Địa chỉ email" />
-            </div>
-            <div className="textare">
-              <textarea
-                name="message"
-                id=""
-                cols="30"
-                rows="10"
-                placeholder="Lời nhắn"
-              ></textarea>
-            </div>
+
             <div className="buttonContainer">
               <a href="/#" className="button btn-right">
                 hesman studio

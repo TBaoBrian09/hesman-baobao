@@ -41,6 +41,7 @@ const HeaderContainer = styled.section`
           .header__logo-item {
             width: 100%;
             height: 100%;
+            min-width: 128px;
           }
         }
       }
@@ -50,21 +51,24 @@ const HeaderContainer = styled.section`
     .header__nav {
       width: 65.961%;
       height: 100%;
-
-      div {
-        width: 100%;
-      }
-
       @media screen and (max-width: 1023px) {
         height: auto;
         position: absolute;
         top: 65px;
         left: 0;
-        border-top: 1px solid #ccc;
+        /* border-top: 4px solid #4b4f58; */
         text-align: center;
         width: 100%;
         background: #fff;
         z-index: 100;
+      }
+      @media screen and (max-width: 420px) {
+        top: 62px;
+        border-top: none;
+      }
+
+      div {
+        width: 100%;
       }
 
       .header__nav--list {
@@ -80,13 +84,6 @@ const HeaderContainer = styled.section`
 
         .header__nav--list-item {
           margin: 4px 0px;
-          a {
-            padding-left: 7px;
-            padding-right: 7px;
-            font-size: 18px;
-            font-weight: 700;
-          }
-
           @media screen and (max-width: 1023px) {
             .active {
               background-color: #55595c;
@@ -96,6 +93,16 @@ const HeaderContainer = styled.section`
               background-color: #55595c;
               cursor: pointer;
             }
+          }
+          @media screen and (max-width: 500px) {
+            margin: 22px 0px;
+          }
+
+          a {
+            padding-left: 7px;
+            padding-right: 7px;
+            font-size: 18px;
+            font-weight: 700;
           }
         }
       }
