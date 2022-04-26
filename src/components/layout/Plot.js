@@ -6,7 +6,7 @@ const PlotStyles = styled.section`
     position: relative;
     .plot--about {
       display: flex;
-      width: 100%;
+    
       position: relative;
       @media screen and (max-width: 1023px) {
         display: block;
@@ -25,7 +25,7 @@ const PlotStyles = styled.section`
           display: none;
         }
       }
-
+  width: 100%;
       .content {
         flex: 4.5;
         position: relative;
@@ -50,6 +50,9 @@ const PlotStyles = styled.section`
 
         .content--wrap {
           padding: 60px 90px 0px 90px;
+          @media screen and (max-width: 426px) {
+            padding: 60px 20px 0px 20px;
+          }
         }
 
         .content__name {
@@ -61,6 +64,12 @@ const PlotStyles = styled.section`
             font-size: 80px;
             font-weight: 700;
             line-height: 80px;
+            text-transform: inherit;
+
+            @media screen and (max-width: 767px) {
+              font-size: 50px;
+              line-height: 50px;
+            }
 
             span {
               color: #3b62ff;
@@ -137,6 +146,9 @@ const PlotStyles = styled.section`
         width: 100%;
         text-align: center;
         left: 0;
+      }
+      @media screen and (max-width: 767px) {
+        top: 600px;
       }
 
       img {

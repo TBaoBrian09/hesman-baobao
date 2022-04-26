@@ -23,7 +23,7 @@ const FooterStyles = styled.footer`
     .layout {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(4, 25%);
+      grid-template-columns: 15% 60% 25%;
 
       @media screen and (max-width: 1023px) {
         grid-template-columns: repeat(1, 100%);
@@ -36,29 +36,43 @@ const FooterStyles = styled.footer`
         justify-content: center;
       }
 
-      .layout-menu {
-        padding: 10px 0px;
+      .layout-menu-container {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        @media screen and (max-width: 1023px) {
+        justify-content: space-around;
+        @media screen and (max-width: 767px) {
+          display: block;
         }
-
-        .list {
+        @media screen and (max-width: 500px) {
+          display: flex;
+        }
+        .layout-menu {
+          padding: 10px 0px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
           @media screen and (max-width: 1023px) {
-            width: 100%;
           }
-        }
 
-        .item {
-          padding: 13px 20px;
+          .list {
+            @media screen and (max-width: 1023px) {
+              width: 100%;
+            }
+          }
 
-          a {
-            font-family: "Jura", Sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-            text-transform: capitalize;
+          .item {
+            padding: 13px 20px;
+
+            a {
+              font-family: "Jura", Sans-serif;
+              font-size: 18px;
+              font-weight: 400;
+              text-transform: capitalize;
+              @media screen and (max-width: 500px) {
+                font-size: 16px;
+              }
+            }
           }
         }
       }
@@ -99,48 +113,51 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div className="layout-menu menu1">
-            <div className="list">
-              <li className="item">
-                <a href="/#">Trang chủ</a>
-              </li>
-              <li className="item">
-                <a href="/#">Giới thiệu</a>
-              </li>
-              <li className="item">
-                <a href="/#">Hệ sinh thái</a>
-              </li>
-              <li className="item">
-                <a href="/#">Tokenomics</a>
-              </li>
-              <li className="item">
-                <a href="/#">Lộ trình</a>
-              </li>
-              <li className="item">
-                <a href="/#">Dapp</a>
-              </li>
+
+          <div className="layout-menu-container">
+            <div className="layout-menu menu1">
+              <div className="list">
+                <li className="item">
+                  <a href="/#">Trang chủ</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Giới thiệu</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Hệ sinh thái</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Tokenomics</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Lộ trình</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Dapp</a>
+                </li>
+              </div>
             </div>
-          </div>
-          <div className="layout-menu menu2">
-            <div className="list">
-              <li className="item">
-                <a href="/#">Đối tác</a>
-              </li>
-              <li className="item">
-                <a href="/#">Pitch Deck</a>
-              </li>
-              <li className="item">
-                <a href="/#">Whitepaper</a>
-              </li>
-              <li className="item">
-                <a href="/#">Hesman studio</a>
-              </li>
-              <li className="item">
-                <a href="/#">Điều khoản sử dụng</a>
-              </li>
-              <li className="item">
-                <a href="/#">Chính sách Quyền riêng tư</a>
-              </li>
+            <div className="layout-menu menu2">
+              <div className="list">
+                <li className="item">
+                  <a href="/#">Đối tác</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Pitch Deck</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Whitepaper</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Hesman studio</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Điều khoản sử dụng</a>
+                </li>
+                <li className="item">
+                  <a href="/#">Chính sách Quyền riêng tư</a>
+                </li>
+              </div>
             </div>
           </div>
 
