@@ -62,7 +62,7 @@ const HeaderContainer = styled.section`
         background: #fff;
         z-index: 100;
       }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 767px) {
         top: 62px;
         border-top: none;
       }
@@ -170,7 +170,7 @@ const Header = () => {
           <div>
             {showmenu && (
               <div className="header__nav--list">
-                <li className="header__nav--list-item active">
+                <li className="header__nav--list-item">
                   <a href="/#">TRANG CHỦ</a>
                 </li>
                 <li className="header__nav--list-item">
