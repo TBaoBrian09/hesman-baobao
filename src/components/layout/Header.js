@@ -110,6 +110,7 @@ const HeaderContainer = styled.section`
       .close-menu {
         @media screen and (max-width: 1023px) {
           display: none;
+          transition: all 2s ease;
         }
       }
     }

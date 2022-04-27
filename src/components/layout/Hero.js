@@ -9,7 +9,7 @@ const HeroContainer = styled.section`
   min-height: 795px;
   overflow: hidden;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 426px) {
     min-height: 1000px;
   }
 
@@ -23,7 +23,7 @@ const HeroContainer = styled.section`
       img {
         max-width: 272px;
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 426px) {
           max-width: 150px;
         }
       }
@@ -48,7 +48,7 @@ const HeroContainer = styled.section`
       top: -105px;
       left: 52px;
 
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 426px) {
         top: -225px;
         left: 0px;
       }
@@ -58,7 +58,7 @@ const HeroContainer = styled.section`
         @media screen and (max-width: 1023px) {
           width: 600px;
         }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 426px) {
           width: 400px;
           height: 850px;
         }
@@ -75,7 +75,7 @@ const HeroContainer = styled.section`
         top: 409px;
         left: 97px;
       }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 426px) {
         top: 200px;
         width: 100%;
         left: 0;
@@ -85,7 +85,7 @@ const HeroContainer = styled.section`
       img {
         width: 533px;
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 426px) {
           width: 350px;
         }
       }
@@ -139,11 +139,15 @@ const HeroContainer = styled.section`
         /* top: 220px; */
       }
 
+      @media screen and (max-width: 769px) {
+        top: 245px;
+      }
+
       .hero__cart {
         width: 50%;
         height: 590px;
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 426px) {
           width: 100%;
         }
 
@@ -152,6 +156,8 @@ const HeroContainer = styled.section`
           min-height: 364px;
           cursor: all-scroll;
           position: relative;
+          display: flex:  !important;;
+          align-items: end;
 
           .wrap--img {
             /* position: absolute; */
