@@ -22,6 +22,10 @@ const ContactStyles = styled.section`
         width: 100%;
         padding: 65px 18px;
       }
+      @media screen and (max-width: 426px) {
+        width: 100%;
+        padding: 65px 0px;
+      }
 
       .title {
         h1 {
@@ -33,6 +37,9 @@ const ContactStyles = styled.section`
           @media screen and (max-width: 1023px) {
             text-transform: inherit;
             text-align: center;
+          }
+          @media screen and (max-width: 426px) {
+            font-size: 60px;
           }
         }
       }
@@ -85,6 +92,10 @@ const ContactStyles = styled.section`
           padding: 10px 40px 10px 40px;
           border: none;
           text-transform: uppercase;
+          @media screen and (max-width: 426px) {
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+          }
         }
 
         .btn-right {

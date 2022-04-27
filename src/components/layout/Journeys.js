@@ -18,6 +18,9 @@ const JourneysStyles = styled.section`
       font-weight: 700;
       text-transform: uppercase;
       gap: 10px;
+      @media screen and (max-width: 426px) {
+        font-size: 25px;
+      }
     }
 
     .content {
@@ -132,6 +135,15 @@ const Journeys = () => {
         breakpoint: 1023,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,

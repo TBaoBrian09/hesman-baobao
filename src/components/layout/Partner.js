@@ -26,6 +26,9 @@ const PartnerStyles = styled.section`
         display: block;
         text-align: center;
       }
+      @media screen and (max-width: 426px) {
+        padding: 10px;
+      }
 
       .title {
         h2 {
@@ -34,6 +37,19 @@ const PartnerStyles = styled.section`
           font-size: 60px;
           font-weight: 700;
           text-transform: inherit;
+
+          @media screen and (max-width: 426px) {
+            font-size: 30px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .logo {
+        img {
+          @media screen and (max-width: 426px) {
+            width: 60%;
+          }
         }
       }
     }
@@ -66,6 +82,10 @@ const PartnerStyles = styled.section`
           h1 {
             font-size: 100px;
             text-transform: inherit;
+
+            @media screen and (max-width: 426px) {
+              font-size: 60px;
+            }
           }
         }
 
@@ -95,6 +115,7 @@ const PartnerStyles = styled.section`
 `;
 const ContainerImg = styled.img`
   width: 100%;
+  min-width: 193px;
 `;
 const Test = styled.div`
   @media only screen and (min-width: 600px) and (max-width: 1024px) {

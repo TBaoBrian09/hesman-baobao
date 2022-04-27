@@ -156,7 +156,7 @@ const Header = () => {
       <div className="header--container display-center  pad-10">
         <div className="header__logo">
           <div className="header__logo--content">
-            <a href="#">
+            <a href="/#">
               <img
                 className="header__logo-item"
                 src="https://hesman.net/wp-content/uploads/2022/02/hesman-logo.svg"
@@ -174,25 +174,25 @@ const Header = () => {
                   <a href="/#">TRANG CHỦ</a>
                 </li>
                 <li className="header__nav--list-item">
-                  <a href="">GIỚI THIỆU</a>
+                  <a href="/#">GIỚI THIỆU</a>
                 </li>
                 <li className="header__nav--list-item">
-                  <a href="">HỆ SINH THÁI</a>
+                  <a href="/#">HỆ SINH THÁI</a>
                 </li>
                 <li className="header__nav--list-item">
-                  <a href="">TOKENOMICS</a>
+                  <a href="/#">TOKENOMICS</a>
                 </li>
                 <li className="header__nav--list-item">
-                  <a href="">LỘ TRÌNH</a>
+                  <a href="/#">LỘ TRÌNH</a>
                 </li>
                 <li className="header__nav--list-item">
-                  <a href="">DAPP</a>
+                  <a href="/#">DAPP</a>
                 </li>
                 <li className="header__nav--list-item">
-                  <a href="">ĐỐI TÁC</a>
+                  <a href="/#">ĐỐI TÁC</a>
                 </li>
                 <li className="header__nav--list-item">
-                  <a href="">LIÊN HỆ</a>
+                  <a href="/#">LIÊN HỆ</a>
                 </li>
               </div>
             )}

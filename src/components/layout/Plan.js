@@ -66,13 +66,13 @@ const PlanStyles = styled.section`
       }
 
       .list {
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
         .item {
           padding: 60px 10px;
+          margin: 10px 0px;
           background: ${(props) => props.bgUrl || "#bef0f5"} no-repeat center
             center/cover;
+          border-bottom: 5px solid black;
+          border-top: 5px solid black;
         }
       }
     }

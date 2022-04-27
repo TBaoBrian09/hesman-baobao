@@ -25,7 +25,7 @@ const FooterStyles = styled.footer`
       display: grid;
       grid-template-columns: 15% 60% 25%;
 
-      @media screen and (max-width: 1023px) {
+      @media screen and (max-width: 1025px) {
         grid-template-columns: repeat(1, 100%);
         padding: 20px 0;
       }
@@ -34,6 +34,9 @@ const FooterStyles = styled.footer`
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width: 426px) {
+          padding: 35px 0px;
+        }
       }
 
       .layout-menu-container {
@@ -43,7 +46,7 @@ const FooterStyles = styled.footer`
         @media screen and (max-width: 767px) {
           display: block;
         }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 426px) {
           display: flex;
         }
         .layout-menu {
@@ -52,11 +55,11 @@ const FooterStyles = styled.footer`
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
-          @media screen and (max-width: 1023px) {
+          @media screen and (max-width: 1025px) {
           }
 
           .list {
-            @media screen and (max-width: 1023px) {
+            @media screen and (max-width: 1025px) {
               width: 100%;
             }
           }
@@ -69,7 +72,7 @@ const FooterStyles = styled.footer`
               font-size: 18px;
               font-weight: 400;
               text-transform: capitalize;
-              @media screen and (max-width: 500px) {
+              @media screen and (max-width: 426px) {
                 font-size: 16px;
               }
             }
