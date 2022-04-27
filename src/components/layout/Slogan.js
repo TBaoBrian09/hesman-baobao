@@ -13,6 +13,25 @@ const SloganStyles = styled.section`
       display: block;
       height: auto;
     }
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 900px;
+      width: 100%;
+      z-index: -1;
+
+      @media screen and (max-width: 426px) {
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     .wrap {
       display: flex;
       flex-direction: column;
@@ -24,19 +43,8 @@ const SloganStyles = styled.section`
       @media screen and (max-width: 1023px) {
         width: 100%;
       }
-
-      .bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 900px;
-        width: 100%;
-        z-index: -1;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
+      @media screen and (max-width: 426px) {
+        padding: 50px 0px;
       }
     }
   }
@@ -53,6 +61,10 @@ const SloganStyles = styled.section`
       width: 100%;
       height: 900px;
       margin: auto;
+    }
+
+    @media screen and (max-width: 426px) {
+      height: auto;
     }
   }
 
@@ -71,6 +83,10 @@ const SloganStyles = styled.section`
 
     .mission1 {
       margin-bottom: 20px;
+
+      @media screen and (max-width: 426px) {
+        margin-bottom: auto;
+      }
       h2 {
         color: var(--e-global-color-astglobalcolor8);
         font-family: "Chakra Petch", Sans-serif;
@@ -78,6 +94,13 @@ const SloganStyles = styled.section`
         font-weight: 700;
         line-height: 56px;
         margin-bottom: 20px;
+
+        @media screen and (max-width: 426px) {
+          font-size: 40px;
+          line-height: 38px;
+          /* margin-bottom: 0px; */
+          text-transform: inherit;
+        }
       }
     }
 
@@ -90,6 +113,15 @@ const SloganStyles = styled.section`
         font-weight: 700;
         line-height: 66px;
         text-align: center;
+
+        @media screen and (max-width: 767px) {
+          font-size: 36px;
+          line-height: 29px;
+        }
+
+        @media screen and (max-width: 426px) {
+          line-height: 50px;
+        }
       }
     }
 
@@ -101,6 +133,25 @@ const SloganStyles = styled.section`
         font-size: 44px;
         font-weight: 700;
         line-height: 66px;
+
+        @media screen and (max-width: 767px) {
+          font-size: 36px;
+          line-height: 29px;
+        }
+      }
+    }
+
+    .mission-nft {
+      h1 {
+        color: var(--e-global-color-d1a5768);
+        font-family: "Jura", Sans-serif;
+        font-size: 225px;
+        font-weight: 700;
+        line-height: 75%;
+
+        @media screen and (max-width: 426px) {
+          font-size: 150px;
+        }
       }
     }
 
@@ -134,6 +185,9 @@ const Slogan = () => {
                 </div>
                 <div className="mission3">
                   <h2>CHO CÁC DỰ ÁN</h2>
+                </div>
+                <div className="mission-nft">
+                  <h1>NFT</h1>
                 </div>
                 <div className="mission4">
                   <h2>

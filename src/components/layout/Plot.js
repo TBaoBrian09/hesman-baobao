@@ -6,7 +6,7 @@ const PlotStyles = styled.section`
     position: relative;
     .plot--about {
       display: flex;
-    
+
       position: relative;
       @media screen and (max-width: 1023px) {
         display: block;
@@ -25,7 +25,7 @@ const PlotStyles = styled.section`
           display: none;
         }
       }
-  width: 100%;
+      width: 100%;
       .content {
         flex: 4.5;
         position: relative;
@@ -130,6 +130,10 @@ const PlotStyles = styled.section`
         flex: 4;
         height: 946px;
 
+        @media screen and (max-width: 426px) {
+          height: auto;
+        }
+
         img {
           width: 100%;
           height: 100%;
@@ -167,6 +171,10 @@ const PlotStyles = styled.section`
 
       img {
         width: 675px;
+
+        @media screen and (max-width: 426px) {
+          width: 100%;
+        }
       }
     }
 
@@ -180,12 +188,20 @@ const PlotStyles = styled.section`
       @media screen and (max-width: 1023px) {
         width: 100%;
       }
+      @media screen and (max-width: 426px) {
+        width: 100%;
+        right: 0px;
+      }
 
       img {
         width: 570px;
 
         @media screen and (max-width: 1023px) {
           width: 630px;
+        }
+
+        @media screen and (max-width: 426px) {
+          width: 100%;
         }
       }
     }

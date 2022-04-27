@@ -82,8 +82,8 @@ const MemberStyles = styled.section`
           width: 527px;
           border: none !important;
         }
-        &:focus-visible{
-          outline:none !important;
+        &:focus-visible {
+          outline: none !important;
         }
         .item-name {
           position: absolute;
@@ -91,7 +91,6 @@ const MemberStyles = styled.section`
           left: 144px;
 
           .item-img:focus-visible {
-           
             border: none !important;
           }
 
@@ -110,6 +109,10 @@ const MemberStyles = styled.section`
       @media screen and (max-width: 1023px) {
         gap: 114px;
       }
+
+      @media screen and (max-width: 426px) {
+        gap: 224px;
+      }
     }
 
     .slick-slide:active {
@@ -120,8 +123,8 @@ const MemberStyles = styled.section`
 
 const Member = () => {
   const settings = {
-    // dots: true,
-    // infinite: true,
+    dots: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
