@@ -71,6 +71,10 @@ const JourneysStyles = styled.section`
           display: flex;
           gap: 0px 35px;
         }
+
+        .slick-dots li button:before {
+          font-size: 16px;
+        }
       }
     }
   }

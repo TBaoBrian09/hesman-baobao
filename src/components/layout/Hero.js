@@ -156,7 +156,7 @@ const HeroContainer = styled.section`
           min-height: 364px;
           cursor: all-scroll;
           position: relative;
-          display: flex:  !important;;
+          display: flex;
           align-items: end;
 
           .wrap--img {
