@@ -85,6 +85,15 @@ const HeaderContainer = styled.section`
           display: block;
         }
 
+        @media screen and (max-width: 769px) {
+          .header__nav--list-item.active {
+            background: #635858;
+            a {
+              color: white;
+            }
+          }
+        }
+
         .header__nav--list-item {
           margin: 4px 0px;
           @media screen and (max-width: 1023px) {
@@ -96,7 +105,7 @@ const HeaderContainer = styled.section`
           @media screen and (max-width: 769px) {
             padding: 10px 0px;
             .active {
-              background-color: #55595c;
+              /* background-color: #55595c; */
             }
           }
           @media screen and (max-width: 426px) {
@@ -108,14 +117,6 @@ const HeaderContainer = styled.section`
             padding-right: 7px;
             font-size: 18px;
             font-weight: 700;
-          }
-        }
-
-        .header__nav--list-item.active {
-          background: #635858;
-
-          a {
-            color: white;
           }
         }
       }
