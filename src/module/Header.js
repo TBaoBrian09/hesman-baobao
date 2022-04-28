@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { TiThMenuOutline } from "react-icons/ti";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.section`
   height: 87px;
@@ -95,7 +96,10 @@ const HeaderContainer = styled.section`
               cursor: pointer;
             }
           }
-          @media screen and (max-width: 500px) {
+          @media screen and (max-width: 769px) {
+            padding: 10px 0px;
+          }
+          @media screen and (max-width: 426px) {
             margin: 22px 0px;
           }
 
@@ -104,6 +108,14 @@ const HeaderContainer = styled.section`
             padding-right: 7px;
             font-size: 18px;
             font-weight: 700;
+          }
+        }
+
+        .header__nav--list-item.active {
+          background: #635858;
+
+          a {
+            color: white;
           }
         }
       }
@@ -179,29 +191,29 @@ const Header = () => {
             <div
               className={`header__nav--list ${showmenu ? "close-menu" : ""}`}
             >
-              <li className="header__nav--list-item">
-                <a href="/#">TRANG CHỦ</a>
+              <li className="header__nav--list-item active">
+                <Link to="/">TRANG CHỦ</Link>
               </li>
               <li className="header__nav--list-item">
-                <a href="/#">GIỚI THIỆU</a>
+                <Link to="/plot">GIỚI THIỆU</Link>
               </li>
               <li className="header__nav--list-item">
-                <a href="/#">HỆ SINH THÁI</a>
+                <Link to="/#">HỆ SINH THÁI</Link>
               </li>
               <li className="header__nav--list-item">
-                <a href="/#">TOKENOMICS</a>
+                <Link to="/#">TOKENOMICS</Link>
               </li>
               <li className="header__nav--list-item">
-                <a href="/#">LỘ TRÌNH</a>
+                <Link to="/#">LỘ TRÌNH</Link>
               </li>
               <li className="header__nav--list-item">
-                <a href="/#">DAPP</a>
+                <Link to="/#">DAPP</Link>
               </li>
               <li className="header__nav--list-item">
-                <a href="/#">ĐỐI TÁC</a>
+                <Link to="/#">ĐỐI TÁC</Link>
               </li>
               <li className="header__nav--list-item">
-                <a href="/#">LIÊN HỆ</a>
+                <Link to="/#">LIÊN HỆ</Link>
               </li>
             </div>
           </div>
