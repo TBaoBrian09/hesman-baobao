@@ -206,7 +206,7 @@ const Partner = () => {
             <div className="list">
               <Slider {...settings}>
                 {dataPartner.map((item) => (
-                  <Test>
+                  <Test key={item.id}>
                     <ContainerImg src={item.url} alt="" />
                   </Test>
                 ))}

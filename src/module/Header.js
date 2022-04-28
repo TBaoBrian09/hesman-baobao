@@ -198,22 +198,22 @@ const Header = () => {
                 <Link to="/plot">GIỚI THIỆU</Link>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/#">HỆ SINH THÁI</Link>
+                <Link to="/">HỆ SINH THÁI</Link>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/#">TOKENOMICS</Link>
+                <Link to="/">TOKENOMICS</Link>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/#">LỘ TRÌNH</Link>
+                <Link to="/">LỘ TRÌNH</Link>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/#">DAPP</Link>
+                <Link to="/">DAPP</Link>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/#">ĐỐI TÁC</Link>
+                <Link to="/">ĐỐI TÁC</Link>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/#">LIÊN HỆ</Link>
+                <Link to="/">LIÊN HỆ</Link>
               </li>
             </div>
           </div>

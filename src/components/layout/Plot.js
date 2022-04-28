@@ -210,7 +210,7 @@ const PlotStyles = styled.section`
 
 const Plot = () => {
   return (
-    <PlotStyles id="plot">
+    <PlotStyles>
       <div className="plot">
         <div className="plot--about">
           <div className="plot__img-1">

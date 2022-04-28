@@ -141,7 +141,7 @@ const Plan = () => {
           <div className="list">
             {dataPlanItem.length > 0 &&
               dataPlanItem.map((item) => (
-                <div className="item" bgUrl={item.bgUrl}>
+                <div className="item" bgUrl={item.bgUrl} key={item.name}>
                   <div className="title__name">
                     <h2>{item.name}</h2>
                     <p>{item.percen}</p>

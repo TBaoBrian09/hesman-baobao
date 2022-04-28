@@ -18,6 +18,8 @@ import Partner from "./components/layout/Partner";
 import Contact from "./components/layout/Contact";
 import Footer from "./components/layout/Footer";
 
+import { Routes, Route } from "react-router-dom";
+
 const ContainerApp = styled.section`
   width: 100%;
   overflow: hidden;
