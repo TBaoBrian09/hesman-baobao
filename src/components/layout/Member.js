@@ -121,6 +121,29 @@ const MemberStyles = styled.section`
   }
 `;
 
+const dataMember = [
+  {
+    id: 1,
+    title: "",
+  },
+  {
+    id: 2,
+    title: "",
+  },
+  {
+    id: 3,
+    title: "",
+  },
+  {
+    id: 4,
+    title: "",
+  },
+  {
+    id: 5,
+    title: "",
+  },
+];
+
 const Member = () => {
   const settings = {
     dots: true,
