@@ -240,15 +240,15 @@ const HeroContainer = styled.section`
 const dataHero = [
   {
     id: 0,
-    url: "/images/sieunhan1.png",
+    url: "https://hesman.net/wp-content/uploads/2022/03/Hero-1.svg",
   },
   {
     id: 1,
-    url: "/images/sieunhan2.png",
+    url: "https://hesman.net/wp-content/uploads/2022/03/HuyHung.png.webp",
   },
   {
     id: 2,
-    url: "/images/sieunhan3.png",
+    url: "https://hesman.net/wp-content/uploads/2022/03/Gasco.png.webp",
   },
 ];
 
