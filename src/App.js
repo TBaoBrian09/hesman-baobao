@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Header from "./components/layout/Header";
+import Header from "./module/Header";
 import Hero from "./components/layout/Hero";
 import Video from "./components/layout/Video";
 import Plot from "./components/layout/Plot";

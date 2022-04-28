@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { TiThMenuOutline } from "react-icons/ti";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const HeaderContainer = styled.section`
   height: 87px;
@@ -218,7 +219,7 @@ const Header = () => {
 
         <div className="respon-menu">
           <div className="icon" onClick={handleClickMenu}>
-            <TiThMenuOutline />
+            {showmenu ? <TiThMenuOutline /> : <AiFillCloseCircle />}
           </div>
         </div>
       </div>
