@@ -60,7 +60,7 @@ const Ecosystem = () => {
   };
 
   return (
-    <EcosystemStyles>
+    <EcosystemStyles id="ecosystem">
       <div className="container">
         <div className="header">
           <img

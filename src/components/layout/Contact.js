@@ -127,7 +127,7 @@ const ContactStyles = styled.section`
 
 const Contact = () => {
   return (
-    <ContactStyles>
+    <ContactStyles id="contact">
       <div className="container">
         <div className="formContainer">
           <form action="">

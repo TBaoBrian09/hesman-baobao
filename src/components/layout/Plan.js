@@ -69,8 +69,8 @@ const PlanStyles = styled.section`
         .item {
           padding: 60px 10px;
           margin: 10px 0px;
-          background: ${(props) => props.bgUrl || "#bef0f5"} no-repeat center
-            center/cover;
+          background: url("https://hesman.net/wp-content/uploads/2022/04/Group-82.png")
+            no-repeat center center/cover;
           border-bottom: 5px solid black;
           border-top: 5px solid black;
         }
@@ -116,7 +116,7 @@ const dataPlanItem = [
 
 const Plan = () => {
   return (
-    <PlanStyles>
+    <PlanStyles id="tokenomics">
       <div className="container">
         <div className="header">
           <div className="name">

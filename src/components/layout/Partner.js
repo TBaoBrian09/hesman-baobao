@@ -184,7 +184,7 @@ const Partner = () => {
     ],
   };
   return (
-    <PartnerStyles>
+    <PartnerStyles id="partner">
       <div className="container">
         <div className="header">
           <div className="title">

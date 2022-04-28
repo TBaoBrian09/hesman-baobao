@@ -156,7 +156,7 @@ const Journeys = () => {
     ],
   };
   return (
-    <JourneysStyles>
+    <JourneysStyles id="journey">
       <div className="container">
         <div className="header">
           <img
