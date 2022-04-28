@@ -192,28 +192,28 @@ const Header = () => {
               className={`header__nav--list ${showmenu ? "close-menu" : ""}`}
             >
               <li className="header__nav--list-item active">
-                <Link to="/">TRANG CHỦ</Link>
+                <a href="#">TRANG CHỦ</a>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/plot">GIỚI THIỆU</Link>
+                <a href="plot">GIỚI THIỆU</a>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/">HỆ SINH THÁI</Link>
+                <a href="/">HỆ SINH THÁI</a>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/">TOKENOMICS</Link>
+                <a href="/">TOKENOMICS</a>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/">LỘ TRÌNH</Link>
+                <a href="/">LỘ TRÌNH</a>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/">DAPP</Link>
+                <a href="/">DAPP</a>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/">ĐỐI TÁC</Link>
+                <a href="/">ĐỐI TÁC</a>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/">LIÊN HỆ</Link>
+                <a href="/">LIÊN HỆ</a>
               </li>
             </div>
           </div>
