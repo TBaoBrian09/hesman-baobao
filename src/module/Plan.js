@@ -65,18 +65,23 @@ const PlanStyles = styled.section`
         display: block;
       }
 
-      .list {
-        .item {
-          padding: 60px 10px;
-          margin: 10px 0px;
-          background: url("https://hesman.net/wp-content/uploads/2022/04/Group-82.png")
-            no-repeat center center/cover;
-          border-bottom: 5px solid black;
-          border-top: 5px solid black;
+      .mobile__plan {
+        width: 100%;
+        padding: 0px 0px 10px 0px;
+        img {
+          width: 100%;
         }
       }
     }
   }
+`;
+
+const MobileItem = styled.div`
+  padding: 60px 10px;
+  margin: 10px 0px;
+  background: url(${({ url }) => url});
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
 `;
 
 const dataPlanItem = [
@@ -84,33 +89,33 @@ const dataPlanItem = [
     name: "Team",
     percen: "10%",
     title: "Khóa 1 năm, sau đó mở 5%/tháng trong vòng 20 tháng kế tiếp",
-    bgUrl: "url('https://hesman.net/wp-content/uploads/2022/04/Group-82.png')",
+    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82.png",
   },
   {
     name: "Public Sale",
     percen: "35%",
     title:
       "Giá 0.02$. 50% vốn huy động thông qua IDO sẽ được thêm vào thanh khoản. Lượng token không bán được sẽ bị đốt",
-    bgUrl: "url('https://hesman.net/wp-content/uploads/2022/04/Group-82.png')",
+    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82-2.png",
   },
   {
     name: "Initial Liquidity",
     percen: "5%",
     title: "10% mở khóa tại TGE. Sau đó mở 5%/tuần",
-    bgUrl: "url('https://hesman.net/wp-content/uploads/2022/04/Group-82.png')",
+    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82-3.png",
   },
   {
     name: "Liquidity Mining and Incentives",
     percen: "30%",
     title:
       "Lượng token sẽ chỉ được mint ra theo tỉ lệ & số lượng người dùng stake NFT và token vào farm/pool. Người dùng sẽ chịu phí 10% trên lượng reward khi rút tài sản khỏi farm/pool.",
-    bgUrl: "url('https://hesman.net/wp-content/uploads/2022/04/Group-82.png')",
+    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82-4.png",
   },
   {
     name: "Gaming Rewards",
     percen: "5%",
     title: "0.1% cố định/ngày",
-    bgUrl: "url('https://hesman.net/wp-content/uploads/2022/04/Group-82.png')",
+    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82-5.png",
   },
 ];
 
@@ -141,7 +146,7 @@ const Plan = () => {
           <div className="list">
             {dataPlanItem.length > 0 &&
               dataPlanItem.map((item) => (
-                <div className="item" bgUrl={item.bgUrl} key={item.name}>
+                <MobileItem url={item.url} key={item.name}>
                   <div className="title__name">
                     <h2>{item.name}</h2>
                     <p>{item.percen}</p>
@@ -149,8 +154,14 @@ const Plan = () => {
                   <div className="title__content">
                     <p>{item.title}</p>
                   </div>
-                </div>
+                </MobileItem>
               ))}
+          </div>
+          <div className="mobile__plan">
+            <img
+              src="https://hesman.net/wp-content/uploads/2022/04/Group-84.jpg.webp"
+              alt=""
+            />
           </div>
         </div>
       </div>

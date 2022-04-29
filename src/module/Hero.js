@@ -220,6 +220,29 @@ const HeroContainer = styled.section`
   }
 `;
 
+const HeroShow = styled.div`
+  position: absolute;
+  width: 100%;
+  left: ${({ left }) => left};
+  top: ${({ top }) => top};
+
+  @media screen and (max-width: 426px) {
+    top: ${({ topMb }) => topMb};
+    left: ${({ leftMb }) => leftMb};
+  }
+`;
+
+const Img = styled.img`
+  width: ${({ widthPc }) => widthPc};
+
+  @media screen and (max-widht: 1023px) {
+  }
+
+  @media screen and (max-width: 426px) {
+    width: ${({ widthMb }) => widthMb};
+  }
+`;
+
 const dataHero = [
   {
     id: 0,
@@ -271,7 +294,7 @@ const dataHeroItem = [
 const Hero = () => {
   const [id, setId] = useState(0);
 
-  console.log(id);
+  // console.log(id);
 
   const settings = {
     dots: true,
@@ -306,29 +329,6 @@ const Hero = () => {
   };
 
   // STYLED
-
-  const HeroShow = styled.div`
-    position: absolute;
-    width: 100%;
-    left: ${({ left }) => left};
-    top: ${({ top }) => top};
-
-    @media screen and (max-width: 426px) {
-      top: ${({ topMb }) => topMb};
-      left: ${({ leftMb }) => leftMb};
-    }
-  `;
-
-  const Img = styled.img`
-    width: ${({ widthPc }) => widthPc};
-
-    @media screen and (max-widht: 1023px) {
-    }
-
-    @media screen and (max-width: 426px) {
-      width: ${({ widthMb }) => widthMb};
-    }
-  `;
 
   return (
     <HeroContainer>

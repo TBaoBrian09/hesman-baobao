@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
-import SlickSlider from "../slider/Slider";
+import SlickSlider from "../components/slider/Slider";
 
 const JourneysStyles = styled.section`
   position: relative;

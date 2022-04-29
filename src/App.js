@@ -4,21 +4,21 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Header from "./module/Header";
-import Hero from "./components/layout/Hero";
-import Video from "./components/layout/Video";
-import Plot from "./components/layout/Plot";
-import Slogan from "./components/layout/Slogan";
-import Member from "./components/layout/Member";
-import Ecosystem from "./components/layout/Ecosystem";
-import Future from "./components/layout/Future";
-import Plan from "./components/layout/Plan";
-import Journeys from "./components/layout/Journeys";
-import Partner from "./components/layout/Partner";
-import Contact from "./components/layout/Contact";
-import Footer from "./components/layout/Footer";
 
 import { Routes, Route } from "react-router-dom";
+import Header from "./module/Header";
+import Hero from "./module/Hero";
+import Video from "./module/Video";
+import Plot from "./module/Plot";
+import Slogan from "./module/Slogan";
+import Member from "./module/Member";
+import Ecosystem from "./module/Ecosystem";
+import Future from "./module/Future";
+import Plan from "./module/Plan";
+import Journeys from "./module/Journeys";
+import Partner from "./module/Partner";
+import Contact from "./module/Contact";
+import Footer from "./module/Footer";
 
 const ContainerApp = styled.section`
   width: 100%;
