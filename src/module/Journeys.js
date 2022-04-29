@@ -69,7 +69,7 @@ const JourneysStyles = styled.section`
 
         .slick-track {
           display: flex;
-          gap: 0px 35px;
+          gap: 0px 6px;
         }
 
         .slick-dots li button:before {
@@ -136,7 +136,16 @@ const Journeys = () => {
     // slidesToScroll: 3,
     responsive: [
       {
-        breakpoint: 1023,
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,

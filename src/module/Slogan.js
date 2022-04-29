@@ -134,6 +134,10 @@ const SloganStyles = styled.section`
         font-weight: 700;
         line-height: 66px;
 
+        @media screen and (max-width: 1024px) {
+          text-align: center;
+        }
+
         @media screen and (max-width: 767px) {
           font-size: 36px;
           line-height: 29px;
