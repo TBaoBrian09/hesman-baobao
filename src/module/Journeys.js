@@ -50,6 +50,10 @@ const JourneysStyles = styled.section`
             bottom: 18px;
             padding: 0 12px;
 
+            @media screen and (max-width: 1440px) {
+              bottom: 4px;
+            }
+
             h2 {
               color: #000000;
               font-family: "Chakra Petch", Sans-serif;
