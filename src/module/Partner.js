@@ -165,6 +165,15 @@ const Partner = () => {
     // centerMode: true,
     responsive: [
       {
+        breakpoint: 2560,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
         breakpoint: 1080,
         settings: {
           slidesToShow: 3,
