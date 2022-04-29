@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
 
@@ -162,8 +162,10 @@ const Member = () => {
     slidesToScroll: 2,
   };
 
-  // const [aboutMember, setAboutMember] = useState("");
-  // console.log(aboutMember);
+  const [aboutMember, setAboutMember] = useState({});
+  console.log(
+    Object.getOwnPropertyNames(aboutMember).length === 0 ? "true" : "false"
+  );
 
   return (
     <MemberStyles>
@@ -172,17 +174,9 @@ const Member = () => {
           <h2>Đội ngũ</h2>
           <div className="title">
             <p>
-              Họa sĩ Nguyễn Hùng Lân sinh năm 1956, là một trong số rất ít họa
-              sĩ vẽ truyện tranh Việt đạt được nhiều thành tựu to lớn trong sự
-              nghiệp
-            </p>
-            <p>
-              Ngoài Dũng sĩ Hesman làm mưa làm gió thị trường truyện tranh Việt,
-              độc giả còn quen thuộc với truyện tranh “Siêu nhân Việt Nam”, Cô
-              Tiên Xanh và những đầu sách mà ông tham gia vẽ tranh minh họa như
-              Võ sĩ đạo Samurai, Nghìn lẻ một đêm, Gương sáng tuổi xanh, v.v. Số
-              đầu truyện tranh của ông đã xuất bản tính từ năm 1987 đến nay đã
-              gần 700 tập đủ mọi thể loại.
+              {Object.getOwnPropertyNames(aboutMember).length === 0
+                ? dataMember[0].title
+                : aboutMember.title}
             </p>
           </div>
         </div>
@@ -193,7 +187,7 @@ const Member = () => {
               <div
                 className="item"
                 key={item.id}
-                // onClick={setAboutMember(item)}
+                onClick={() => setAboutMember(item)}
               >
                 <img className="item-img" src={item.img} alt="" />
 
