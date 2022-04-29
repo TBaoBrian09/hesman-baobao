@@ -20,6 +20,9 @@ const EcosystemStyles = styled.section`
     @media screen and (max-width: 426px) {
       font-size: 24px;
     }
+    @media screen and (max-width: 378px) {
+      font-size: 20px;
+    }
   }
 
   .banner {

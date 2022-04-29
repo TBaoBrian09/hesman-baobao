@@ -9,7 +9,7 @@ const HeroContainer = styled.section`
   overflow: hidden;
 
   @media screen and (max-width: 426px) {
-    min-height: 1000px;
+    min-height: 900px;
   }
 
   .hero--container {
@@ -121,8 +121,7 @@ const HeroContainer = styled.section`
         top: 245px;
       }
 
-      @media screen and (max-with: 426px) {
-        top: 0px;
+      @media screen and (max-width: 426px) {
         bottom: 0px;
       }
 

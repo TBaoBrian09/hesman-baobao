@@ -112,6 +112,9 @@ const PlotStyles = styled.section`
             fill: #000000;
             color: #000000;
             background-color: #ffff00;
+            @media screen and (max-width: 426px) {
+              font-size: 20px;
+            }
           }
 
           .button--blue {
@@ -121,6 +124,9 @@ const PlotStyles = styled.section`
             fill: #000000;
             color: #fff;
             background-color: #3b62ff;
+            @media screen and (max-width: 426px) {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -155,11 +161,19 @@ const PlotStyles = styled.section`
         top: 600px;
       }
 
+      @media screen and (max-width: 376px) {
+        top: 675px;
+      }
+
       img {
         width: 177px;
 
         @media screen and (max-width: 1023px) {
           width: 266px;
+        }
+
+        @media screen and (max-width: 376px) {
+          width: 200px;
         }
       }
     }

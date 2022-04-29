@@ -77,11 +77,71 @@ const PlanStyles = styled.section`
 `;
 
 const MobileItem = styled.div`
-  padding: 60px 10px;
+  padding: 60px 0px;
   margin: 10px 0px;
-  background: url(${({ url }) => url});
+  /* background: url(${({ url }) => url}); */
   border-bottom: 5px solid black;
   border-top: 5px solid black;
+  position: relative;
+  color: white;
+
+  /* &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    background: url(${({ bg2 }) => bg2});
+  } */
+`;
+
+const ItemTitle = styled.div`
+  padding: 0px 10px;
+  font-family: "Chakra Petch", Sans-serif;
+  font-weight: 700;
+
+  .title__name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+
+    h2 {
+      text-transform: capitalize;
+    }
+    p {
+    }
+  }
+
+  .title__content {
+    p {
+    }
+  }
+`;
+
+const ItemBg1 = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const ItemBg2 = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const dataPlanItem = [
@@ -89,33 +149,38 @@ const dataPlanItem = [
     name: "Team",
     percen: "10%",
     title: "Khóa 1 năm, sau đó mở 5%/tháng trong vòng 20 tháng kế tiếp",
-    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82.png",
+    bg2: "https://hesman.net/wp-content/uploads/2022/04/Group-82.png",
+    bg1: "https://hesman.net/wp-content/uploads/2022/04/Rectangle-41.jpg",
   },
   {
     name: "Public Sale",
     percen: "35%",
     title:
       "Giá 0.02$. 50% vốn huy động thông qua IDO sẽ được thêm vào thanh khoản. Lượng token không bán được sẽ bị đốt",
-    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82-2.png",
+    bg2: "https://hesman.net/wp-content/uploads/2022/04/Group-82-2.png",
+    bg1: "https://hesman.net/wp-content/uploads/2022/04/Rectangle-41-2.jpg",
   },
   {
     name: "Initial Liquidity",
     percen: "5%",
     title: "10% mở khóa tại TGE. Sau đó mở 5%/tuần",
-    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82-3.png",
+    bg2: "https://hesman.net/wp-content/uploads/2022/04/Group-82-3.png",
+    bg1: "https://hesman.net/wp-content/uploads/2022/04/Rectangle-41-3.jpg",
   },
   {
     name: "Liquidity Mining and Incentives",
     percen: "30%",
     title:
       "Lượng token sẽ chỉ được mint ra theo tỉ lệ & số lượng người dùng stake NFT và token vào farm/pool. Người dùng sẽ chịu phí 10% trên lượng reward khi rút tài sản khỏi farm/pool.",
-    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82-4.png",
+    bg2: "https://hesman.net/wp-content/uploads/2022/04/Group-82-4.png",
+    bg1: "https://hesman.net/wp-content/uploads/2022/04/Rectangle-41-4.jpg",
   },
   {
     name: "Gaming Rewards",
     percen: "5%",
     title: "0.1% cố định/ngày",
-    url: "https://hesman.net/wp-content/uploads/2022/04/Group-82-5.png",
+    bg2: "https://hesman.net/wp-content/uploads/2022/04/Group-82-5.png",
+    bg1: "https://hesman.net/wp-content/uploads/2022/04/Rectangle-41-5.jpg",
   },
 ];
 
@@ -146,14 +211,22 @@ const Plan = () => {
           <div className="list">
             {dataPlanItem.length > 0 &&
               dataPlanItem.map((item) => (
-                <MobileItem url={item.url} key={item.name}>
-                  <div className="title__name">
-                    <h2>{item.name}</h2>
-                    <p>{item.percen}</p>
-                  </div>
-                  <div className="title__content">
-                    <p>{item.title}</p>
-                  </div>
+                <MobileItem bg2={item.bg2} bg1={item.bg1} key={item.name}>
+                  <ItemTitle>
+                    <div className="title__name">
+                      <h2>{item.name}</h2>
+                      <p>{item.percen}</p>
+                    </div>
+                    <div className="title__content">
+                      <p>{item.title}</p>
+                    </div>
+                  </ItemTitle>
+                  <ItemBg1>
+                    <img src={item.bg1} alt="" />
+                  </ItemBg1>
+                  <ItemBg2>
+                    <img src={item.bg2} alt="" />
+                  </ItemBg2>
                 </MobileItem>
               ))}
           </div>

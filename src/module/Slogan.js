@@ -44,7 +44,7 @@ const SloganStyles = styled.section`
         width: 100%;
       }
       @media screen and (max-width: 426px) {
-        padding: 50px 0px;
+        padding: 100px 0px;
       }
     }
   }
@@ -114,6 +114,19 @@ const SloganStyles = styled.section`
         line-height: 66px;
         text-align: center;
 
+        p {
+          &:first-child {
+            font-size: 29px;
+            line-height: 43px;
+            text-transform: lowercase;
+            margin-bottom: 20px;
+          }
+          &:last-child {
+            font-size: 32px;
+            line-height: 43px;
+          }
+        }
+
         @media screen and (max-width: 767px) {
           font-size: 36px;
           line-height: 29px;
@@ -168,6 +181,9 @@ const SloganStyles = styled.section`
         font-weight: 700;
         line-height: 39px;
         text-align: center;
+        @media screen and (max-width: 426px) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -225,7 +241,8 @@ const Slogan = () => {
 
                 <div className="mission2">
                   <h2>
-                    thành dự án NFT đầu tiên <br /> PHÓNG TÁC THÀNH TRUYỆN TRANH
+                    <p>thành dự án toàn diện</p>
+                    <p>PHÓNG TÁC THÀNH TRUYỆN TRANH</p>
                   </h2>
                 </div>
 

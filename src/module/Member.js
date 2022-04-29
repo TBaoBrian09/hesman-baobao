@@ -41,6 +41,10 @@ const MemberStyles = styled.section`
         @media screen and (max-width: 1023px) {
           text-transform: inherit;
         }
+
+        @media screen and (max-width: 426px) {
+          font-size: 50px;
+        }
       }
 
       .title {
