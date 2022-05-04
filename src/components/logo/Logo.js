@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Image from "../image/Image";
 
 const LogoStyles = styled.div`
   width: 14.043%;
@@ -23,23 +25,26 @@ const LogoStyles = styled.div`
   }
 `;
 
-const LogoContainer = styled.div`
+const LogoContent = styled.div`
   width: 100%;
   height: 100%;
 `;
 
-const Logo = () => {
+const Logo = ({
+  className = "",
+  to = "/",
+  minWidth = "",
+  src = "",
+  alt = "",
+  ...props
+}) => {
   return (
     <LogoStyles>
-      <div className="header__logo--content">
-        <a href="/#">
-          <img
-            className="header__logo-item"
-            src="https://hesman.net/wp-content/uploads/2022/02/hesman-logo.svg"
-            alt=""
-          />
-        </a>
-      </div>
+      <LogoContent>
+        <Link to={to}>
+          <Image minWidth={minWidth} src={src} alt={alt} />
+        </Link>
+      </LogoContent>
     </LogoStyles>
   );
 };

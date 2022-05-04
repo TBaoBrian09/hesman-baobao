@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { TiThMenuOutline } from "react-icons/ti";
 import { AiFillCloseCircle } from "react-icons/ai";
+import Logo from "../components/logo/Logo";
 
 const HeaderContainer = styled.section`
   height: 87px;
@@ -173,17 +174,11 @@ const Header = () => {
   return (
     <HeaderContainer>
       <div className="header--container display-center  pad-10">
-        <div className="header__logo">
-          <div className="header__logo--content">
-            <a href="/#">
-              <img
-                className="header__logo-item"
-                src="https://hesman.net/wp-content/uploads/2022/02/hesman-logo.svg"
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
+        <Logo
+          to="/"
+          src="https://hesman.net/wp-content/uploads/2022/02/hesman-logo.svg"
+          alt="logo"
+        />
 
         <div className="header__nav display-center">
           <div>
