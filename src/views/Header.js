@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { TiThMenuOutline } from "react-icons/ti";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 
 const HeaderContainer = styled.section`
   height: 87px;

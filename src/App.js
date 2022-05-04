@@ -6,19 +6,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { Routes, Route } from "react-router-dom";
-import Header from "./module/Header";
-import Hero from "./module/Hero";
-import Video from "./module/Video";
-import Plot from "./module/Plot";
-import Slogan from "./module/Slogan";
-import Member from "./module/Member";
-import Ecosystem from "./module/Ecosystem";
-import Future from "./module/Future";
-import Plan from "./module/Plan";
-import Journeys from "./module/Journeys";
-import Partner from "./module/Partner";
-import Contact from "./module/Contact";
-import Footer from "./module/Footer";
+import Header from "./views/Header";
+import Hero from "./views/Hero";
+import Video from "./views/Video";
+import Plot from "./views/Plot";
+import Slogan from "./views/Slogan";
+import Member from "./views/Member";
+import Ecosystem from "./views/Ecosystem";
+import Future from "./views/Future";
+import Plan from "./views/Plan";
+import Journeys from "./views/Journeys";
+import Partner from "./views/Partner";
+import Contact from "./views/Contact";
+import Footer from "./views/Footer";
 
 const ContainerApp = styled.section`
   width: 100%;
