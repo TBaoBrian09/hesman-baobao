@@ -333,7 +333,7 @@ const Hero = () => {
     <HeroContainer>
       <div className="hero--container">
         {/* presents img */}
-        <div className="hero__present">
+        <div className="hero__present flex justify-end">
           <img
             src="https://hesman.net/wp-content/uploads/2022/03/Hero-3.svg"
             alt=""
@@ -341,7 +341,7 @@ const Hero = () => {
         </div>
 
         {/* commic superhero img */}
-        <div className="hero__superhero">
+        <div className="hero__superhero flex justify-end">
           <img
             src="https://hesman.net/wp-content/uploads/2022/03/Hero-4.svg"
             alt=""
@@ -349,7 +349,7 @@ const Hero = () => {
         </div>
 
         {/* commic book img*/}
-        <div className="hero__commicbook">
+        <div className="hero__commicbook flex justify-end">
           <img
             src="https://hesman.net/wp-content/uploads/2022/03/Hero-5.svg"
             alt=""
@@ -371,7 +371,7 @@ const Hero = () => {
         </HeroShow>
 
         {/* clound legand */}
-        <div className="hero__cloud--legand">
+        <div className="hero__cloud--legand flex justify-end">
           <img
             src="https://hesman.net/wp-content/uploads/2022/03/Vision.png.webp"
             alt=""
@@ -400,7 +400,7 @@ const Hero = () => {
         </div>
 
         {/* cloud legand commic */}
-        <div className="hero__cloud--legand-comic">
+        <div className="hero__cloud--legand-comic flex justify-end">
           <img
             src="https://hesman.net/wp-content/uploads/2022/03/Hero-6-2.png.webp"
             alt=""

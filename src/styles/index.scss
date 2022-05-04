@@ -7,6 +7,10 @@
 /* font-family: 'Jura', sans-serif; */
 /* font-family: 'Russo One', sans-serif; */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --e-global-color-astglobalcolor0: #0170b9;
   --e-global-color-astglobalcolor1: #3a3a3a;
@@ -100,6 +104,12 @@ html {
 @media (max-width: 921px) {
   html {
     font-size: 85.5%;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .close-menu {
+    display: none;
   }
 }
 
