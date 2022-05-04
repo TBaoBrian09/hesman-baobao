@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const ImageStyles = styled.img`
-  width: ${({ width }) => width};
+  width: ${({ width }) => width || "100%"};
   height: ${({ height }) => height};
   min-width: ${({ minWidth }) => minWidth}; ;
 `;

@@ -5,7 +5,11 @@ export const SectionStyles = styled.section`
   height: ${({ height }) => height || "100%"}; ;
 `;
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  position: ${({ position }) => position};
+  width: 100%;
+  height: 100%;
+`;
 
 export const Content = styled.div`
   width: ${({ width }) => width || "100%"};

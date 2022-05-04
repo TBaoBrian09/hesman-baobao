@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Slider from "react-slick/lib/slider";
 import styled from "styled-components";
+import { Container } from "../../styles/GlobalStyles";
 
-const HeroContainer = styled.section`
+const HeroStyles = styled.section`
   position: relative;
   width: 100%;
   min-height: 795px;
@@ -12,157 +13,152 @@ const HeroContainer = styled.section`
     min-height: 900px;
   }
 
-  .hero--container {
-    position: absolute;
+  .hero__cloud--legand {
     width: 100%;
-    height: 100%;
+    /* z-index: 99; */
+    img {
+      max-width: 272px;
 
-    .hero__cloud--legand {
+      @media screen and (max-width: 426px) {
+        max-width: 150px;
+      }
+    }
+  }
+
+  .hero__cloud--legand-comic {
+    width: calc(100% - 110px);
+    text-align: right;
+    position: absolute;
+    top: 237px;
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+
+    img {
+      width: 240px;
+    }
+  }
+
+  .hero__commicbook {
+    width: calc(100% - 213px);
+    text-align: right;
+    position: absolute;
+    top: 167px;
+
+    @media screen and (max-width: 1023px) {
+      top: 409px;
+      left: 97px;
+    }
+    @media screen and (max-width: 426px) {
+      top: 200px;
       width: 100%;
-      z-index: 99;
-      img {
-        max-width: 272px;
-
-        @media screen and (max-width: 426px) {
-          max-width: 150px;
-        }
-      }
+      left: 0;
+      text-align: center;
     }
 
-    .hero__cloud--legand-comic {
-      width: calc(100% - 110px);
-      text-align: right;
-      position: absolute;
-      top: 237px;
-      @media screen and (max-width: 1023px) {
-        display: none;
-      }
+    img {
+      width: 533px;
 
-      img {
-        width: 240px;
-      }
-    }
-
-    .hero__commicbook {
-      width: calc(100% - 213px);
-      text-align: right;
-      position: absolute;
-      top: 167px;
-
-      @media screen and (max-width: 1023px) {
-        top: 409px;
-        left: 97px;
-      }
       @media screen and (max-width: 426px) {
-        top: 200px;
-        width: 100%;
-        left: 0;
-        text-align: center;
-      }
-
-      img {
-        width: 533px;
-
-        @media screen and (max-width: 426px) {
-          width: 350px;
-        }
+        width: 350px;
       }
     }
+  }
 
-    .hero__superhero {
-      width: calc(100% - 200px);
-      text-align: right;
-      position: absolute;
-      top: 58px;
+  .hero__superhero {
+    width: calc(100% - 200px);
+    text-align: right;
+    position: absolute;
+    top: 58px;
 
-      @media screen and (max-width: 1023px) {
-        top: 300px;
-      }
+    @media screen and (max-width: 1023px) {
+      top: 300px;
+    }
+    @media screen and (max-width: 500px) {
+      top: 150px;
+      width: 100%;
+    }
+
+    img {
+      width: 700px;
       @media screen and (max-width: 500px) {
-        top: 150px;
+        width: 400px;
+      }
+    }
+  }
+
+  .hero__present {
+    position: absolute;
+    top: 60px;
+    width: calc(100% - 734px);
+    text-align: right;
+    @media screen and (max-width: 1023px) {
+      top: 273px;
+    }
+
+    img {
+      width: 300px;
+    }
+  }
+
+  .hero__cart--wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 10px;
+    position: absolute;
+    top: 390px;
+
+    @media screen and (max-width: 1023px) {
+      /* top: 220px; */
+    }
+
+    @media screen and (max-width: 769px) {
+      top: 245px;
+    }
+
+    @media screen and (max-width: 426px) {
+      bottom: 0px;
+    }
+
+    .hero__cart {
+      width: 50%;
+      height: 590px;
+
+      @media screen and (max-width: 426px) {
         width: 100%;
       }
 
-      img {
-        width: 700px;
-        @media screen and (max-width: 500px) {
-          width: 400px;
-        }
-      }
-    }
+      .hero__cart--item {
+        width: 235px;
+        min-height: 364px;
+        cursor: all-scroll;
+        position: relative;
+        display: flex;
+        align-items: end;
 
-    .hero__present {
-      position: absolute;
-      top: 60px;
-      width: calc(100% - 734px);
-      text-align: right;
-      @media screen and (max-width: 1023px) {
-        top: 273px;
-      }
-
-      img {
-        width: 300px;
-      }
-    }
-
-    .hero__cart--wrap {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 0px 10px;
-      position: absolute;
-      top: 390px;
-
-      @media screen and (max-width: 1023px) {
-        /* top: 220px; */
-      }
-
-      @media screen and (max-width: 769px) {
-        top: 245px;
-      }
-
-      @media screen and (max-width: 426px) {
-        bottom: 0px;
-      }
-
-      .hero__cart {
-        width: 50%;
-        height: 590px;
-
-        @media screen and (max-width: 426px) {
-          width: 100%;
-        }
-
-        .hero__cart--item {
-          width: 235px;
-          min-height: 364px;
-          cursor: all-scroll;
-          position: relative;
+        .wrap--img {
+          /* position: absolute; */
+          height: 100%;
           display: flex;
-          align-items: end;
+          flex-direction: column;
+          justify-content: end;
 
-          .wrap--img {
-            /* position: absolute; */
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
+          img {
+            width: 100%;
+            background: no-repeat center center/cover;
+            border: 4px solid black;
+            filter: brightness(60%) contrast(100%) saturate(100%) blur(0px)
+              hue-rotate(0deg);
 
-            img {
-              width: 100%;
-              background: no-repeat center center/cover;
-              border: 4px solid black;
-              filter: brightness(60%) contrast(100%) saturate(100%) blur(0px)
+            &:hover {
+              filter: brightness(100%) contrast(100%) saturate(100%) blur(0px)
                 hue-rotate(0deg);
-
-              &:hover {
-                filter: brightness(100%) contrast(100%) saturate(100%) blur(0px)
-                  hue-rotate(0deg);
-              }
             }
           }
+        }
 
-          /* .opacity {
+        /* .opacity {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -170,40 +166,39 @@ const HeroContainer = styled.section`
             opacity: 0.5;
           } */
 
-          &:hover .opacity {
-            display: none;
-          }
+        &:hover .opacity {
+          display: none;
         }
+      }
 
-        .slick-slider {
+      .slick-slider {
+        @media screen and (max-width: 500px) {
+          height: 100%;
+        }
+      }
+
+      .slick-initialized .slick-slide {
+        width: 30% !important;
+
+        .slick-list {
           @media screen and (max-width: 500px) {
             height: 100%;
           }
         }
+      }
 
-        .slick-initialized .slick-slide {
-          width: 30% !important;
+      .slick-track {
+        display: flex;
+        gap: 20px;
+      }
 
-          .slick-list {
-            @media screen and (max-width: 500px) {
-              height: 100%;
-            }
-          }
-        }
+      .slick-dots {
+        bottom: 12px;
+      }
 
-        .slick-track {
-          display: flex;
-          gap: 20px;
-        }
-
-        .slick-dots {
-          bottom: 12px;
-        }
-
-        .slick-dots li button:before {
-          font-size: 15px;
-          color: white;
-        }
+      .slick-dots li button:before {
+        font-size: 15px;
+        color: white;
       }
     }
   }
@@ -330,8 +325,8 @@ const Hero = () => {
   // STYLED
 
   return (
-    <HeroContainer>
-      <div className="hero--container">
+    <HeroStyles>
+      <Container position="absolute">
         {/* presents img */}
         <div className="hero__present flex justify-end">
           <img
@@ -371,7 +366,7 @@ const Hero = () => {
         </HeroShow>
 
         {/* clound legand */}
-        <div className="hero__cloud--legand flex justify-end">
+        <div className="hero__cloud--legand">
           <img
             src="https://hesman.net/wp-content/uploads/2022/03/Vision.png.webp"
             alt=""
@@ -406,8 +401,8 @@ const Hero = () => {
             alt=""
           />
         </div>
-      </div>
-    </HeroContainer>
+      </Container>
+    </HeroStyles>
   );
 };
 

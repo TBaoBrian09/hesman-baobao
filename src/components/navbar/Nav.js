@@ -7,7 +7,7 @@ const NavStyles = styled.div`
   @media screen and (max-width: 1023px) {
     height: auto;
     position: absolute;
-    top: 65px;
+    top: 60px;
     left: 0;
     /* border-top: 4px solid #4b4f58; */
     text-align: center;
