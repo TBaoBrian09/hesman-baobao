@@ -22,33 +22,6 @@ const HeaderContainer = styled.section`
       justify-content: space-between;
     }
 
-    /* LOGO */
-    .header__logo {
-      width: 14.043%;
-      height: 100%;
-
-      @media screen and (max-width: 1023px) {
-        padding-left: 10px;
-      }
-
-      .header__logo--content {
-        width: 100%;
-        height: 100%;
-
-        a {
-          display: block;
-          height: 100%;
-          width: 100%;
-
-          .header__logo-item {
-            width: 100%;
-            height: 100%;
-            min-width: 128px;
-          }
-        }
-      }
-    }
-
     /* NAVBAR */
     .header__nav {
       width: 65.961%;

@@ -7,6 +7,11 @@ export const SectionStyles = styled.section`
 
 export const Container = styled.div``;
 
+export const Content = styled.div`
+  width: ${({ width }) => width || "100%"};
+  height: ${({ height }) => height || "100%"};
+`;
+
 export const Button = styled.button`
   display: inline-block;
   padding: 12px 24px;
