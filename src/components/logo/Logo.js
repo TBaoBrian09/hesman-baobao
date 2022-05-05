@@ -42,7 +42,12 @@ const Logo = ({
     <LogoStyles>
       <LogoContent>
         <Link to={to}>
-          <Image minWidth={minWidth} src={src} alt={alt} />
+          <Image
+            className="header__logo-item"
+            minWidth="128px"
+            src={src}
+            alt={alt}
+          />
         </Link>
       </LogoContent>
     </LogoStyles>

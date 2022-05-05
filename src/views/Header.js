@@ -78,6 +78,7 @@ const Header = () => {
     <HeaderContainer>
       <div className="header--container display-center pad-10">
         <Logo
+          style={{ minWidth: "128px" }}
           to="/"
           src="https://hesman.net/wp-content/uploads/2022/02/hesman-logo.svg"
           alt="logo"
